@@ -1,0 +1,299 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@font-face {
+  font-family: "OneShinhanMedium";
+  src: url("/assets/fonts/OneShinhanMedium.woff") format("woff");
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 1200px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 50;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.header .header-top {
+  position: relative;
+  display: block;
+  height: 56px;
+  background: #fff;
+}
+.header .header-top .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .header-top .container .header-top__left {
+  position: relative;
+  display: flex;
+}
+.header .header-top .container .header-top__left .header-top__utility {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header-top .container .header-top__left .header-top__utility .header__utility-item {
+  color: #494f60;
+  font-size: 14px;
+  padding: 8px 13px 8px 12px;
+  cursor: pointer;
+}
+.header .header-top .container .header-top__left .header-top__utility .header__utility-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 13px;
+  width: 1px;
+  height: 12px;
+  background: #ddd;
+}
+.header .header-top .container .header-top__left .header-top__dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 13px 8px 12px;
+}
+.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button .dropdown__title {
+  color: #494f60;
+  font-size: 14px;
+}
+.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button .dropdown__arrow {
+  width: 16px;
+  height: 16px;
+}
+.header .header-top .container .header-top__left .header-top__dropdown .dropdown__menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  z-index: 51;
+  border: 1px solid #666;
+  background: #fff;
+}
+.header .header-top .container .header-top__left .header-top__dropdown .dropdown__menu .dropdown__menu-item {
+  font-size: 13px;
+  color: #111;
+  padding: 5px;
+}
+.header .header-top .container .header-top__right {
+  position: relative;
+  display: block;
+  color: #323b50;
+}
+.header .header-top .container .header-top__right .header-top__user-menu {
+  display: flex;
+}
+.header .header-top .container .header-top__right .header-top__user-menu .user-menu__item {
+  font-size: 13px;
+  color: #323b50;
+  padding: 0 10px;
+}
+.header .header-bottom {
+  position: relative;
+  display: block;
+  height: 74px;
+}
+.header .header-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.header .header-bottom .container .header-bottom__left .header-logo .header-logo__image {
+  width: 160px;
+  height: 39px;
+}
+.header .header-bottom .container .header-bottom__middle {
+  position: relative;
+  display: block;
+}
+.header .header-bottom .container .header-bottom__middle .gnb-navbar {
+  position: relative;
+  display: flex;
+}
+.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list {
+  padding: 0 15px;
+  font-family: "OneShinhanMedium";
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list .navbar-menu__list-link {
+  color: inherit;
+}
+.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list .navbar-menu__list-link:visited {
+  color: #222;
+}
+.header .header-bottom .container .header-bottom__right .header-bottom__all-menu {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.header .header-bottom .container .header-bottom__right .header-bottom__all-menu .all-menu__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.list-link {
+  color: inherit;
+}
+
+.list-link:visited {
+  color: #494f60;
+}
+
+.hide {
+  display: none;
+}

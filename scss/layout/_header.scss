@@ -1,0 +1,184 @@
+$gray: #494f60;
+$font-stack: "Spoqa Han Sans Neo", "sans-serif";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 50;
+  font-family: $font-stack;
+
+  // Header-top
+
+  .header-top {
+    position: relative;
+    display: block;
+    height: 56px;
+    background: #fff;
+
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      margin: 0 auto;
+
+      .header-top__left {
+        position: relative;
+        display: flex;
+
+        .header-top__utility {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .header__utility-item {
+            color: $gray;
+            font-size: 14px;
+            padding: 8px 13px 8px 12px;
+            cursor: pointer;
+          }
+
+          .header__utility-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 13px;
+            width: 1px;
+            height: 12px;
+            background: #ddd;
+          }
+        }
+
+        .header-top__dropdown {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 13px 8px 12px;
+          .dropdown__button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            .dropdown__title {
+              color: $gray;
+              font-size: 14px;
+            }
+            .dropdown__arrow {
+              width: 16px;
+              height: 16px;
+            }
+          }
+          .dropdown__menu {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            z-index: 51;
+            border: 1px solid #666;
+            background: #fff;
+            .dropdown__menu-item {
+              font-size: 13px;
+              color: #111;
+              padding: 5px;
+            }
+          }
+        }
+      }
+
+      .header-top__right {
+        position: relative;
+        display: block;
+        color: #323b50;
+
+        .header-top__user-menu {
+          display: flex;
+
+          .user-menu__item {
+            font-size: 13px;
+            color: #323b50;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  // Header-bottom
+  .header-bottom {
+    position: relative;
+    display: block;
+    height: 74px;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      margin: 0 auto;
+
+      .header-bottom__left {
+        .header-logo {
+          .header-logo__image {
+            width: 160px;
+            height: 39px;
+          }
+        }
+      }
+
+      .header-bottom__middle {
+        position: relative;
+        display: block;
+
+        .gnb-navbar {
+          position: relative;
+          display: flex;
+
+          .navbar-menu__list {
+            padding: 0 15px;
+            font-family: "OneShinhanMedium";
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+
+            .navbar-menu__list-link {
+              color: inherit;
+            }
+
+            .navbar-menu__list-link:visited {
+              color: #222;
+            }
+          }
+        }
+      }
+
+      .header-bottom__right {
+        .header-bottom__all-menu {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          .all-menu__icon {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-link {
+  color: inherit;
+}
+
+.list-link:visited {
+  color: $gray;
+}
+
+.hide {
+  display: none;
+}
