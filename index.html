@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>신한카드</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="wrap">
@@ -15,119 +18,312 @@
         <!-- Header Top -->
         <div class="header-top">
           <div class="container">
-            <div class="header-top__left">
-              <ul class="header-top__utility">
-                <li class="header__utility-item">
-                  <a href="#" class="list-link">개인</a>
-                </li>
-                <li class="header__utility-item">
-                  <a href="#" class="list-link">법인</a>
-                </li>
-                <li class="header__utility-item">
-                  <a href="#" class="list-link">가맹점</a>
-                </li>
-              </ul>
-              <div class="header-top__dropdown dropdown">
-                <button class="dropdown__button">
-                  <span class="dropdown__title">마이카</span>
-                  <img
-                    src="/assets/images/h-util-arr1.png"
-                    alt="dropdown-button"
-                    class="dropdown__arrow"
-                  />
-                </button>
-                <ul class="dropdown__menu hide">
-                  <li class="dropdown__menu-item">
-                    <a href="#" class="list-link">마이카</a>
+            <div class="header__row">
+              <div class="header-top__left">
+                <ul class="header-top__utility">
+                  <li class="header-top__utility-item">
+                    <a href="#" class="list-link">개인</a>
                   </li>
-                  <li class="dropdown__menu-item">
-                    <a href="#" class="list-link">올댓쇼핑</a>
+                  <li class="header-top__utility-item">
+                    <a href="#" class="list-link">법인</a>
                   </li>
-                  <li class="dropdown__menu-item">
-                    <a href="#" class="list-link">심한아름인</a>
+                  <li class="header-top__utility-item">
+                    <a href="#" class="list-link">가맹점</a>
                   </li>
-                  <li class="dropdown__menu-item">
-                    <a href="#" class="list-link">BIGDATA</a>
+                </ul>
+                <div class="header-top__dropdown dropdown">
+                  <button class="dropdown__button">
+                    마이카
+                    <img
+                      src="/assets/images/h-util-arr1.png"
+                      alt="dropdown-button"
+                      class="dropdown__arrow"
+                    />
+                  </button>
+                  <ul class="dropdown__menu hide">
+                    <li class="dropdown__menu-item">
+                      <a href="#" class="list-link">마이카</a>
+                    </li>
+                    <li class="dropdown__menu-item">
+                      <a href="#" class="list-link">올댓쇼핑</a>
+                    </li>
+                    <li class="dropdown__menu-item">
+                      <a href="#" class="list-link">심한아름인</a>
+                    </li>
+                    <li class="dropdown__menu-item">
+                      <a href="#" class="list-link">BIGDATA</a>
+                    </li>
+                    <li class="dropdown__menu-item">
+                      <a href="#" class="list-link">신한은행</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header-top__right">
+                <ul class="header-top__user-menu">
+                  <li class="user-menu__item">
+                    <a href="#" class="list-link">로그인</a>
                   </li>
-                  <li class="dropdown__menu-item">
-                    <a href="#" class="list-link">신한은행</a>
+                  <li class="user-menu__item">
+                    <a href="#" class="list-link">회원가입</a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="list-link">아이디찾기</a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="list-link">상품공시실</a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="list-link">금용소비자보호포털</a>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="header-top__right">
-              <ul class="header-top__user-menu">
-                <li class="user-menu__item">
-                  <a href="#" class="list-link">로그인</a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="list-link">회원가입</a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="list-link">아이디찾기</a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="list-link">상품공시실</a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="list-link">금용소비자보호포털</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
         <!-- Header Bottom -->
         <div class="header-bottom">
           <div class="container">
-            <div class="header-bottom__left">
-              <a href="#" class="header-logo">
-                <img
-                  src="assets/images/ci-shinhan-pc.png"
-                  alt="shinhancard-logo"
-                  class="header-logo__image"
-                />
-              </a>
-            </div>
-            <nav class="header-bottom__middle">
-              <ul class="gnb-navbar">
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">마이</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">혜택</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">금융</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">카드</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">서비스</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">디지털</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">Tops Club</a>
-                </li>
-                <li class="navbar-menu__list">
-                  <a href="#" class="navbar-menu__list-link">고객센터</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="header-bottom__right">
-              <button class="header-bottom__all-menu">
-                <img
-                  src="assets/images/h-menu-more.png"
-                  alt="all-menu"
-                  class="all-menu__icon"
-                />
-              </button>
+            <div class="header__row">
+              <div class="header-bottom__left">
+                <a href="#" class="header-logo">
+                  <img
+                    src="assets/images/ci-shinhan-pc.png"
+                    alt="shinhancard-logo"
+                    class="header-logo__image"
+                  />
+                </a>
+              </div>
+              <nav class="header-bottom__middle">
+                <ul class="gnb-navbar">
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">마이</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">혜택</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">금융</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">카드</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">서비스</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">디지털</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">Tops Club</a>
+                  </li>
+                  <li class="navbar-menu__item">
+                    <a href="#" class="navbar-menu__item-link">고객센터</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header-bottom__right">
+                <button class="menu-button">
+                  <img
+                    src="assets/images/h-menu-more.png"
+                    alt="all-menu"
+                    class="menu-button__icon"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Main -->
+      <section class="main">
+        <div class="container">
+          <div class="main-row">
+            <!-- Main search bar -->
+            <div class="main-search">
+              <div class="main-search__box">
+                <form class="main-search__form searchbox">
+                  <input
+                    class="main-search__input"
+                    type="search"
+                    maxlength="200"
+                    placeholder="'신한플레이'를 검색해보세요"
+                  />
+                </form>
+              </div>
+            </div>
+            <!-- Main quick menu -->
+            <div class="main-quickmenu swiper mySwiper">
+              <ul class="main-quickmenu__lists swiper-wrapper">
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">월별 명세서</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">이용내역</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">이용한도</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">즉시결제</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">포인트조회</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">실적충족현황</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">내가받은혜택</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">전자민원접수</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">내카드관리</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">마이샵쿠폰</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">카드별이용한도</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">이용한도상향</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">카드재발급</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">카드사용등록</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">대출금액상환</span>
+                  </a>
+                </li>
+                <li class="main-quickmenu__item swiper-slide">
+                  <a href="#" class="quickmenu__item-box">
+                    <img
+                      src="assets/images/icon-150-type2-1.png"
+                      alt="quickmenu-icon"
+                      class="quickmenu-icon"
+                    />
+                    <span class="quickmenu__item-title">진행중이벤트</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>

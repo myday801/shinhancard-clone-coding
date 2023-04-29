@@ -1,9 +1,9 @@
-html {
-}
-
-body {
+.wrap {
+  position: relative;
+  display: block;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
 }

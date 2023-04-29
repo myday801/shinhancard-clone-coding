@@ -140,8 +140,14 @@ table {
   border-spacing: 0;
 }
 
+.wrap {
+  position: relative;
+  display: block;
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -158,32 +164,33 @@ table {
   display: block;
   height: 56px;
   background: #fff;
+  padding: 0 40px;
 }
-.header .header-top .container {
+.header .header__row {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
-.header .header-top .container .header-top__left {
+.header .header-top__left {
   position: relative;
   display: flex;
 }
-.header .header-top .container .header-top__left .header-top__utility {
+.header .header-top__utility {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.header .header-top .container .header-top__left .header-top__utility .header__utility-item {
+.header .header-top__utility-item {
+  position: relative;
   color: #494f60;
   font-size: 14px;
   padding: 8px 13px 8px 12px;
   cursor: pointer;
+  text-align: center;
 }
-.header .header-top .container .header-top__left .header-top__utility .header__utility-item:not(:last-child)::after {
+.header .header-top__utility-item:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -192,49 +199,47 @@ table {
   height: 12px;
   background: #ddd;
 }
-.header .header-top .container .header-top__left .header-top__dropdown {
+.header .header-top__dropdown {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px 13px 8px 12px;
 }
-.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button {
+.header .dropdown__button {
   border: 0;
   background: transparent;
+  font-size: 14px;
+  color: #494f60;
   cursor: pointer;
 }
-.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button .dropdown__title {
-  color: #494f60;
-  font-size: 14px;
-}
-.header .header-top .container .header-top__left .header-top__dropdown .dropdown__button .dropdown__arrow {
+.header .dropdown__arrow {
   width: 16px;
   height: 16px;
 }
-.header .header-top .container .header-top__left .header-top__dropdown .dropdown__menu {
+.header .dropdown__menu {
   position: absolute;
   left: 0;
   top: 0;
-  display: block;
+  display: none;
   z-index: 51;
   border: 1px solid #666;
   background: #fff;
 }
-.header .header-top .container .header-top__left .header-top__dropdown .dropdown__menu .dropdown__menu-item {
+.header .dropdown__menu-item {
   font-size: 13px;
   color: #111;
   padding: 5px;
 }
-.header .header-top .container .header-top__right {
+.header .header-top__right {
   position: relative;
   display: block;
   color: #323b50;
 }
-.header .header-top .container .header-top__right .header-top__user-menu {
+.header .header-top__user-menu {
   display: flex;
 }
-.header .header-top .container .header-top__right .header-top__user-menu .user-menu__item {
+.header .user-menu__item {
   font-size: 13px;
   color: #323b50;
   padding: 0 10px;
@@ -243,45 +248,39 @@ table {
   position: relative;
   display: block;
   height: 74px;
+  padding: 0 40px;
 }
-.header .header-bottom .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  margin: 0 auto;
-}
-.header .header-bottom .container .header-bottom__left .header-logo .header-logo__image {
+.header .header-logo__image {
   width: 160px;
   height: 39px;
 }
-.header .header-bottom .container .header-bottom__middle {
+.header .header-bottom__middle {
   position: relative;
   display: block;
 }
-.header .header-bottom .container .header-bottom__middle .gnb-navbar {
+.header .gnb-navbar {
   position: relative;
   display: flex;
 }
-.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list {
+.header .navbar-menu__item {
   padding: 0 15px;
   font-family: "OneShinhanMedium";
   font-size: 20px;
   font-weight: 700;
   color: #222;
 }
-.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list .navbar-menu__list-link {
+.header .navbar-menu__item-link {
   color: inherit;
 }
-.header .header-bottom .container .header-bottom__middle .gnb-navbar .navbar-menu__list .navbar-menu__list-link:visited {
+.header .navbar-menu__item-link:visited {
   color: #222;
 }
-.header .header-bottom .container .header-bottom__right .header-bottom__all-menu {
+.header .menu-button {
   border: 0;
   background: transparent;
   cursor: pointer;
 }
-.header .header-bottom .container .header-bottom__right .header-bottom__all-menu .all-menu__icon {
+.header .menu-button__icon {
   width: 32px;
   height: 32px;
 }
@@ -296,4 +295,53 @@ table {
 
 .hide {
   display: none;
+}
+
+.main {
+  position: relative;
+  display: block;
+  padding-top: 130px;
+  background: url("assets/images/main_bg_pc.png");
+}
+.main .main-row {
+  width: 100%;
+  height: 100%;
+}
+.main .main-search {
+  position: relative;
+  display: block;
+  width: 740px;
+  height: 120px;
+  margin: 0 auto;
+}
+.main .main-search__form {
+  padding: 15px;
+}
+.main .main-search__input {
+  width: 700px;
+  height: 64px;
+  border: 2px solid #486eff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
+  background: #fff;
+  font-size: 20px;
+  color: #999;
+  background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px) center/32px 32px;
+  padding-left: 18px;
+}
+.main .main-quickmenu {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  height: 135px;
+  margin: 0 auto;
+}
+.main .main-quickmenu__lists {
+  position: relative;
+  display: flex;
+}
+.main .quickmenu__item-box {
+  width: 120px;
+  height: 111px;
+  font-size: 16px;
 }
