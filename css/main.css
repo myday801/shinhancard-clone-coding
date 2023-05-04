@@ -1,12 +1,8 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@font-face {
-  font-family: "OneShinhanMedium";
-  src: url("/assets/fonts/OneShinhanMedium.woff") format("woff");
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain)
 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 html,
 body,
 div,
@@ -140,6 +136,18 @@ table {
   border-spacing: 0;
 }
 
+input {
+  font-family: inherit;
+}
+
+@font-face {
+  font-family: "OneShinhanMedium";
+  src: url("/assets/fonts/OneShinhanMedium.woff") format("woff");
+}
+body {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
 .wrap {
   position: relative;
   display: block;
@@ -157,7 +165,6 @@ table {
   display: block;
   width: 100%;
   z-index: 50;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 .header .header-top {
   position: relative;
@@ -221,10 +228,13 @@ table {
   position: absolute;
   left: 0;
   top: 0;
-  display: none;
+  display: block;
   z-index: 51;
   border: 1px solid #666;
   background: #fff;
+}
+.header .hide {
+  display: none;
 }
 .header .dropdown__menu-item {
   font-size: 13px;
@@ -252,7 +262,7 @@ table {
 }
 .header .header-logo__image {
   width: 160px;
-  height: 39px;
+  height: 40px;
 }
 .header .header-bottom__middle {
   position: relative;
@@ -275,6 +285,13 @@ table {
 .header .navbar-menu__item-link:visited {
   color: #222;
 }
+.header .menu__depth2 {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: none;
+  z-index: 51;
+}
 .header .menu-button {
   border: 0;
   background: transparent;
@@ -291,10 +308,6 @@ table {
 
 .list-link:visited {
   color: #494f60;
-}
-
-.hide {
-  display: none;
 }
 
 .main {

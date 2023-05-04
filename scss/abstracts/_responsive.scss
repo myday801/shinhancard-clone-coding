@@ -1,0 +1,33 @@
+// 반응형 화면 크기
+$breakpoints: (
+  "mobile": 640px,
+  "tablet": 1024px,
+  "tablet-l": 1100px,
+);
+
+@mixin responsive($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @error '@mixin responsive: `#{$name}` is not a key in breakpoints.' +
+    ' Available breakpoints are: `#{$breakpoints}`';
+  }
+}
+
+@mixin min-width($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+}
+@mixin max-width($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}
+@mixin min-to-max-width($min-width, $max-width) {
+  @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}

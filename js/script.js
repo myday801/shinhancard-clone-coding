@@ -5,3 +5,13 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+$(document).ready(function () {
+  $(".navbar-menu__item-link").mouseenter(function () {
+    $(".menu__depth2").show();
+  });
+
+  $(".menu__depth2", ".navbar-menu__item-link").mouseleave(function () {
+    $(".menu__depth2").hide();
+  });
+});
