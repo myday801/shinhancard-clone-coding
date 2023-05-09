@@ -1,17 +1,22 @@
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 $(document).ready(function () {
-  $(".navbar-menu__item-link").mouseenter(function () {
-    $(".menu__depth2").show();
-  });
+  $(".navbar-menu__item").hover(
+    function () {
+      $(this).find(".menu__depth2").stop().slideDown(200);
+    },
+    function () {
+      $(this).find(".menu__depth2").stop().slideUp(200);
+    }
+  );
 
-  $(".menu__depth2", ".navbar-menu__item-link").mouseleave(function () {
-    $(".menu__depth2").hide();
+  // Main quick menu swiper
+  var swiper1 = new Swiper(".swiper2", {
+    slidesPerView: 8,
+    loop: true,
+    slidesPerGroup: 2,
+    slidesPerGroupSkip: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 });

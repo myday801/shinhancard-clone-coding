@@ -93,10 +93,6 @@
     background: #fff;
   }
 
-  .hide {
-    display: none;
-  }
-
   .dropdown__menu-item {
     font-size: 13px;
     color: #111;
@@ -186,6 +182,9 @@
     left: 0;
     display: none;
     z-index: 51;
+    width: 100%;
+    height: 500px;
+    background: green;
   }
 
   .menu-button {
@@ -199,19 +198,17 @@
     height: 32px;
   }
 
-  //   .header-bottom__right {
-  //     @include responsive("mobile") {
-  //       position: absolute;
-  //       top: 13px;
-  //       right: 20px;
-  //     }
+  .header-bottom__right {
+    @include responsive(mobile) {
+      position: absolute;
+      top: 13px;
+      right: 20px;
+    }
+  }
 
-  //     @include reponsive("tablet-l") {
-  //       position: absolute;
-  //       top: 13px;
-  //       right: 20px;
-  //     }
-  //   }
+  .hide {
+    display: none;
+  }
 }
 
 .list-link {

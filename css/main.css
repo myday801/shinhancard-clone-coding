@@ -233,9 +233,6 @@ body {
   border: 1px solid #666;
   background: #fff;
 }
-.header .hide {
-  display: none;
-}
 .header .dropdown__menu-item {
   font-size: 13px;
   color: #111;
@@ -291,6 +288,9 @@ body {
   left: 0;
   display: none;
   z-index: 51;
+  width: 100%;
+  height: 500px;
+  background: green;
 }
 .header .menu-button {
   border: 0;
@@ -300,6 +300,9 @@ body {
 .header .menu-button__icon {
   width: 32px;
   height: 32px;
+}
+.header .hide {
+  display: none;
 }
 
 .list-link {
@@ -314,7 +317,6 @@ body {
   position: relative;
   display: block;
   padding-top: 130px;
-  background: url("assets/images/main_bg_pc.png");
 }
 .main .main-row {
   width: 100%;
@@ -354,7 +356,21 @@ body {
   display: flex;
 }
 .main .quickmenu__item-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 120px;
-  height: 111px;
+  height: 110px;
   font-size: 16px;
+  margin: 0 7px;
+}
+.main .quickmenu-icon {
+  width: 40px;
+}
+.main .quickmenu__item-title {
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 1.4;
 }

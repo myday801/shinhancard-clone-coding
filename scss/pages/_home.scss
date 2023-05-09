@@ -2,7 +2,7 @@
   position: relative;
   display: block;
   padding-top: 130px;
-  background: url("assets/images/main_bg_pc.png");
+  // background: url("assets/images/main_bg_pc.png");
 
   .main-row {
     width: 100%;
@@ -52,11 +52,24 @@
   }
 
   .quickmenu__item-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 120px;
-    height: 111px;
+    height: 110px;
     font-size: 16px;
+    margin: 0 7px;
   }
 
   .quickmenu-icon {
+    width: 40px;
+  }
+
+  .quickmenu__item-title {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 1.4;
   }
 }
