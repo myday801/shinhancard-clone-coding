@@ -168,14 +168,14 @@ body {
 }
 .header .header-top {
   position: relative;
-  display: block;
+  display: none;
   height: 56px;
   background: #fff;
   padding: 0 40px;
 }
 @media (min-width: 1100px) {
   .header .header-top {
-    display: none;
+    display: block;
   }
 }
 .header .header__row {
@@ -185,11 +185,6 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-@media (min-width: 1024px) {
-  .header .header__row {
-    display: block;
-  }
 }
 .header .header-top__left {
   position: relative;
@@ -267,16 +262,6 @@ body {
   height: 74px;
   padding: 0 40px;
 }
-@media (min-width: 1024px) {
-  .header .header-bottom {
-    height: 100px;
-  }
-}
-@media (min-width: 1100px) {
-  .header .header-bottom {
-    margin-top: 40px;
-  }
-}
 .header .header-logo__image {
   width: 160px;
   height: 40px;
@@ -294,12 +279,14 @@ body {
   }
 }
 .header .header-bottom__middle {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 50px;
   display: block;
 }
 @media (min-width: 1024px) {
   .header .header-bottom__middle {
-    margin: 0 auto;
+    position: relative;
   }
 }
 .header .gnb-navbar {
@@ -324,10 +311,47 @@ body {
   top: 40px;
   left: 0;
   display: none;
-  z-index: 51;
+  z-index: 10;
   width: 100%;
   height: 500px;
-  background: green;
+  border-top: 5px solid #f4f7fc;
+  background: #fff;
+}
+.header .depth2-title__box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.header .depth2-title__text {
+  font-size: 16px;
+  color: #222;
+}
+.header .depth2-title__text::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: url("/assets/images/arr-60-r-a.png") center no-repeat 100% auto;
+}
+.header .depth2-menu__content {
+  position: relative;
+  display: flex;
+  padding-bottom: 60px;
+}
+.header .depth2-menu__lists {
+  position: relative;
+  display: block;
+}
+.header .depth2-menu__list-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.header .depth2-menu__item {
+  font-size: 14px;
 }
 .header .menu-button {
   border: 0;
@@ -337,20 +361,6 @@ body {
 .header .menu-button__icon {
   width: 32px;
   height: 32px;
-}
-@media (min-width: 640px) {
-  .header .header-bottom__right {
-    position: absolute;
-    top: 13px;
-    right: 20px;
-  }
-}
-@media (min-width: 1100px) {
-  .header .header-bottom__right {
-    position: absolute;
-    top: 13px;
-    right: 20px;
-  }
 }
 .header .hide {
   display: none;
@@ -368,23 +378,27 @@ body {
   position: relative;
   display: block;
   padding-top: 130px;
-  background: url("assets/images/main_bg_pc.png") no-repeat;
+  background: url("/assets/images/main_bg_pc.png");
 }
-.main .main-row {
+
+.main-row {
   width: 100%;
   height: 100%;
 }
-.main .main-search {
+
+.main-search {
   position: relative;
   display: block;
   width: 740px;
   height: 120px;
   margin: 0 auto;
 }
-.main .main-search__form {
+
+.main-search__form {
   padding: 15px;
 }
-.main .main-search__input {
+
+.main-search__input {
   width: 700px;
   height: 64px;
   border: 2px solid #486eff;
@@ -396,18 +410,21 @@ body {
   background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px) center/32px 32px;
   padding-left: 18px;
 }
-.main .main-quickmenu {
+
+.main-quickmenu {
   position: relative;
   display: block;
   max-width: 1200px;
   height: 135px;
   margin: 0 auto;
 }
-.main .main-quickmenu__lists {
+
+.main-quickmenu__lists {
   position: relative;
   display: flex;
 }
-.main .quickmenu__item-box {
+
+.quickmenu__item-box {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -418,10 +435,12 @@ body {
   font-size: 16px;
   margin: 0 7px;
 }
-.main .quickmenu-icon {
+
+.quickmenu-icon {
   width: 40px;
 }
-.main .quickmenu__item-title {
+
+.quickmenu__item-title {
   padding-top: 20px;
   font-size: 16px;
   line-height: 1.4;

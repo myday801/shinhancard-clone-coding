@@ -10,13 +10,13 @@
 
   .header-top {
     position: relative;
-    display: block;
+    display: none;
     height: 56px;
     background: #fff;
     padding: 0 40px;
 
-    @include responsive("tablet-l") {
-      display: none;
+    @include responsive(tablet-l) {
+      display: block;
     }
   }
 
@@ -27,10 +27,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-
-    @include responsive("tablet") {
-      display: block;
-    }
   }
 
   .header-top__left {
@@ -121,37 +117,31 @@
     display: block;
     height: 74px;
     padding: 0 40px;
-
-    @include responsive("tablet") {
-      height: 100px;
-    }
-
-    @include responsive("tablet-l") {
-      margin-top: 40px;
-    }
   }
 
   .header-logo__image {
     width: 160px;
     height: 40px;
 
-    @include responsive("mobile") {
+    @include responsive(mobile) {
       width: 142px;
       height: 40px;
     }
 
-    @include responsive("tablet-l") {
+    @include responsive(tablet-l) {
       width: 140px;
       height: 40px;
     }
   }
 
   .header-bottom__middle {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 50px;
     display: block;
 
-    @include responsive("tablet") {
-      margin: 0 auto;
+    @include responsive(tablet) {
+      position: relative;
     }
   }
 
@@ -181,10 +171,54 @@
     top: 40px;
     left: 0;
     display: none;
-    z-index: 51;
+    z-index: 10;
     width: 100%;
     height: 500px;
-    background: green;
+    border-top: 5px solid #f4f7fc;
+    background: #fff;
+  }
+
+  .depth2-title__box {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .depth2-title__text {
+    font-size: 16px;
+    color: #222;
+  }
+
+  .depth2-title__text::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background: url("/assets/images/arr-60-r-a.png") center no-repeat 100% auto;
+  }
+
+  .depth2-menu__content {
+    position: relative;
+    display: flex;
+    padding-bottom: 60px;
+  }
+
+  .depth2-menu__lists {
+    position: relative;
+    display: block;
+  }
+
+  .depth2-menu__list-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .depth2-menu__item {
+    font-size: 14px;
   }
 
   .menu-button {
@@ -198,19 +232,19 @@
     height: 32px;
   }
 
-  .header-bottom__right {
-    @include responsive(mobile) {
-      position: absolute;
-      top: 13px;
-      right: 20px;
-    }
+  // .header-bottom__right {
+  //   @include responsive(mobile) {
+  //     position: absolute;
+  //     top: 13px;
+  //     right: 20px;
+  //   }
 
-    @include responsive(tablet-l) {
-      position: absolute;
-      top: 13px;
-      right: 20px;
-    }
-  }
+  //   @include responsive(tablet-l) {
+  //     position: absolute;
+  //     top: 13px;
+  //     right: 20px;
+  //   }
+  // }
 
   .hide {
     display: none;

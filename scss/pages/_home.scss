@@ -2,74 +2,74 @@
   position: relative;
   display: block;
   padding-top: 130px;
-  background: url("assets/images/main_bg_pc.png") no-repeat;
+  background: url("/assets/images/main_bg_pc.png");
+}
 
-  .main-row {
-    width: 100%;
-    height: 100%;
-  }
+.main-row {
+  width: 100%;
+  height: 100%;
+}
 
-  // Search box
+// Search box
 
-  .main-search {
-    position: relative;
-    display: block;
-    width: 740px;
-    height: 120px;
-    margin: 0 auto;
-  }
+.main-search {
+  position: relative;
+  display: block;
+  width: 740px;
+  height: 120px;
+  margin: 0 auto;
+}
 
-  .main-search__form {
-    padding: 15px;
-  }
+.main-search__form {
+  padding: 15px;
+}
 
-  .main-search__input {
-    width: 700px;
-    height: 64px;
-    border: 2px solid #486eff;
-    border-radius: 8px;
-    box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
-    background: #fff;
-    font-size: 20px;
-    color: #999;
-    background: url("/assets/images/ico-72-src2.png") no-repeat
-      calc(100% - 10px) center / 32px 32px;
-    padding-left: 18px;
-  }
+.main-search__input {
+  width: 700px;
+  height: 64px;
+  border: 2px solid #486eff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
+  background: #fff;
+  font-size: 20px;
+  color: #999;
+  background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px)
+    center / 32px 32px;
+  padding-left: 18px;
+}
 
-  // Quick menu
-  .main-quickmenu {
-    position: relative;
-    display: block;
-    max-width: 1200px;
-    height: 135px;
-    margin: 0 auto;
-  }
+// Quick menu
+.main-quickmenu {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  height: 135px;
+  margin: 0 auto;
+}
 
-  .main-quickmenu__lists {
-    position: relative;
-    display: flex;
-  }
+.main-quickmenu__lists {
+  position: relative;
+  display: flex;
+}
 
-  .quickmenu__item-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 110px;
-    font-size: 16px;
-    margin: 0 7px;
-  }
+.quickmenu__item-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 110px;
+  font-size: 16px;
+  margin: 0 7px;
+}
 
-  .quickmenu-icon {
-    width: 40px;
-  }
+.quickmenu-icon {
+  width: 40px;
+}
 
-  .quickmenu__item-title {
-    padding-top: 20px;
-    font-size: 16px;
-    line-height: 1.4;
-  }
+.quickmenu__item-title {
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 1.4;
 }
