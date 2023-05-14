@@ -1,11 +1,12 @@
 .main {
   position: relative;
   display: block;
-  padding-top: 130px;
-  background: url("/assets/images/main_bg_pc.png");
+  margin-top: 130px;
+  background: url("/assets/images/main_bg_pc.png") center center repeat;
+  overflow: hidden;
 }
 
-.main-row {
+.main__row {
   width: 100%;
   height: 100%;
 }
@@ -50,6 +51,10 @@
 .main-quickmenu__lists {
   position: relative;
   display: flex;
+  // height: 135px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
 }
 
 .quickmenu__item-box {
@@ -72,4 +77,20 @@
   padding-top: 20px;
   font-size: 16px;
   line-height: 1.4;
+}
+
+.quickmenu__button {
+  width: 40px;
+  height: 40px;
+  margin-top: -17px;
+}
+
+.quickmenu__next {
+  right: -20px;
+  background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
+}
+
+.quickmenu__prev {
+  left: -20px;
+  background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
 }

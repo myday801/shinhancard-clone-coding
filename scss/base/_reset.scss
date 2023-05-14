@@ -93,6 +93,15 @@ video {
   box-sizing: border-box;
   text-decoration: none;
 }
+
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: #494f60;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

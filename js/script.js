@@ -18,4 +18,9 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  // 마이카 button
+  $("#mycarButton").click(function () {
+    $(".dropdown__menu").toggle();
+  });
 });
