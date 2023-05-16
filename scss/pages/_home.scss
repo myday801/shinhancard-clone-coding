@@ -85,12 +85,19 @@
   margin-top: -17px;
 }
 
-.quickmenu__next {
+.swiper-button-next {
   right: -20px;
+  z-index: 10;
   background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
 }
 
-.quickmenu__prev {
+.swiper-button-prev {
   left: -20px;
+  z-index: 10;
   background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
 }
