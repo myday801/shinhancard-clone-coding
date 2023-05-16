@@ -439,6 +439,7 @@ body {
   display: block;
   margin-top: 130px;
   background: url("/assets/images/main_bg_pc.png") center center repeat;
+  background-size: 100% 100%;
   overflow: hidden;
 }
 
@@ -510,22 +511,30 @@ body {
   line-height: 1.4;
 }
 
-.quickmenu__button {
-  width: 40px;
-  height: 40px;
-  margin-top: -17px;
-}
-
 .swiper-button-next {
   right: -20px;
-  z-index: 10;
+  width: 24px;
+  height: 24px;
   background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
+}
+@media (min-width: 768px) {
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .swiper-button-prev {
   left: -20px;
-  z-index: 10;
+  width: 24px;
+  height: 24px;
   background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
+}
+@media (min-width: 768px) {
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .swiper-button-next::after,

@@ -8,8 +8,25 @@ $(document).ready(function () {
     }
   );
 
+  // Gnb swiper
+  var swiper1 = new Swiper(".swiper1", {
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: ".swiper-button-next1",
+      prevEl: ".swiper-button-prev1",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 8,
+      },
+      1024: {
+        slidesPerView: 8,
+      },
+    },
+  });
+
   // Main quick menu swiper
-  var swiper1 = new Swiper(".swiper2", {
+  var swiper2 = new Swiper(".swiper2", {
     slidesPerView: 8,
     loop: true,
     slidesPerGroup: 2,
