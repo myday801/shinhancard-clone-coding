@@ -37,7 +37,11 @@ $(document).ready(function () {
   });
 
   // 마이카 button
-  $("#mycarButton").click(function () {
+  $("#mycarButton, .dropdown__close-button").click(function () {
     $(".dropdown__menu").toggle();
+  });
+  // all-menu toggle
+  $("#allMenuButton").click(function () {
+    $(".buttom__right-menu-all").toggle();
   });
 });
