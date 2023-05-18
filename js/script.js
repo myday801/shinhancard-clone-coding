@@ -29,7 +29,7 @@ $(document).ready(function () {
   var swiper2 = new Swiper(".swiper2", {
     slidesPerView: 8,
     loop: true,
-    slidesPerGroup: 2,
+    slidesPerGroup: 8,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
