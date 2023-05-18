@@ -40,8 +40,9 @@ $(document).ready(function () {
   $("#mycarButton, .dropdown__close-button").click(function () {
     $(".dropdown__menu").toggle();
   });
+
   // all-menu toggle
   $("#allMenuButton").click(function () {
-    $(".buttom__right-menu-all").toggle();
+    $(".bottom__right-menu-all").toggle();
   });
 });

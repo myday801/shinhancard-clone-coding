@@ -155,6 +155,10 @@ input {
   font-family: "OneShinhanMedium";
   src: url("/assets/fonts/OneShinhanMedium.woff") format("woff");
 }
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
@@ -254,7 +258,7 @@ body {
   flex-wrap: wrap;
 }
 .header .dropdown__menu-item {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #111;
   padding: 5px;
 }
@@ -265,6 +269,7 @@ body {
   width: 15px;
   height: 15px;
   background: url("../../assets/images/top_dropdown_up.png") no-repeat 50% 50%;
+  border: 0;
 }
 .header .header-top__right {
   position: relative;
@@ -413,21 +418,20 @@ body {
   cursor: pointer;
 }
 .header .menu-button__icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 1024px) {
+  .header .menu-button__icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 .header .header-bottom__right {
   position: absolute;
   top: 13px;
   right: 20px;
   display: flex;
-}
-@media (min-width: 768px) {
-  .header .header-bottom__right {
-    position: absolute;
-    top: 13px;
-    right: 20px;
-  }
 }
 @media (min-width: 1024px) {
   .header .bottom__right-loginwrap {
@@ -450,6 +454,7 @@ body {
   z-index: 55;
   width: 100%;
   height: 100%;
+  background: #fff;
 }
 .header .hide {
   display: none;
@@ -476,13 +481,18 @@ body {
   height: 120px;
   margin: 0 auto;
 }
+@media (min-width: 1024px) {
+  .main-search {
+    width: 700px;
+  }
+}
 
 .main-search__form {
   padding: 15px;
 }
 
 .main-search__input {
-  width: 700px;
+  width: 100%;
   height: 64px;
   border: 2px solid #486eff;
   border-radius: 8px;
@@ -500,11 +510,13 @@ body {
   max-width: 1200px;
   height: 135px;
   margin: 0 auto;
+  padding: 184px 0 50px 0;
 }
 
 .main-quickmenu__lists {
   position: relative;
   display: flex;
+  width: 100%;
   border-radius: 12px;
   background: #fff;
   box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
