@@ -151,6 +151,11 @@ input {
   font-family: inherit;
 }
 
+button {
+  border: 0;
+  background-color: inherit;
+}
+
 @font-face {
   font-family: "OneShinhanMedium";
   src: url("/assets/fonts/OneShinhanMedium.woff") format("woff");
@@ -171,6 +176,12 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
 }
 
 .header {
@@ -256,11 +267,13 @@ body {
 .header .dropdown__menu-list {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px 30px 10px 10px;
 }
 .header .dropdown__menu-item {
+  width: 50%;
+  padding: 5px;
   font-size: 1.3rem;
   color: #111;
-  padding: 5px;
 }
 .header .dropdown__close-button {
   position: absolute;
@@ -280,16 +293,21 @@ body {
   display: flex;
 }
 .header .user-menu__item {
-  font-size: 13px;
-  color: #323b50;
-  padding: 0 10px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .header .user-menu__item-link {
+    font-size: 13px;
+    color: #323b50;
+    padding: 0 10px;
+  }
 }
 .header .user-menu__item:not(:first-child)::before {
   content: "";
   position: absolute;
   display: block;
   left: 0;
-  top: 4px;
+  top: 2px;
   width: 1px;
   height: 12px;
   background-color: #ddd;
@@ -462,25 +480,32 @@ body {
   }
 }
 .header .all-menu {
-  display: flex;
-  flex-direction: column;
   max-width: 1200px;
 }
 .header .all-menu__header {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 56px;
+  padding: 0px 24px;
   background: #fff;
   border-bottom: 5px solid #f4f7fc;
-  padding: 0px 24px;
 }
-.header .all-menu__header-util {
+.header .all-menu__list {
   display: flex;
   align-items: center;
 }
+.header .all-menu__link {
+  padding: 0 5px;
+  font-size: 1.4rem;
+}
 .header .all-menu__login-icon {
+  width: 30px;
+  height: 30px;
+}
+.header .all-menu__close-icon {
   width: 30px;
   height: 30px;
 }
@@ -537,14 +562,8 @@ body {
   display: block;
   max-width: 1200px;
   height: 135px;
-  margin: 0 auto;
-  padding: 184px 0 50px 0;
-}
-
-.main-quickmenu__lists {
-  position: relative;
-  display: flex;
-  width: 100%;
+  margin: 0 -20px;
+  padding: 0 20px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
@@ -558,8 +577,8 @@ body {
   align-items: center;
   width: 120px;
   height: 110px;
-  font-size: 16px;
   margin: 0 7px;
+  font-size: 16px;
 }
 
 .quickmenu-icon {

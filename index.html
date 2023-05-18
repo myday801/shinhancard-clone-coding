@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>신한카드</title>
-    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="wrap">
@@ -65,19 +65,21 @@
               <div class="header-top__right">
                 <ul class="header-top__user-menu">
                   <li class="user-menu__item">
-                    <a href="#">로그인</a>
+                    <a href="#" class="user-menu__item-link">로그인</a>
                   </li>
                   <li class="user-menu__item">
-                    <a href="#">회원가입</a>
+                    <a href="#" class="user-menu__item-link">회원가입</a>
                   </li>
                   <li class="user-menu__item">
-                    <a href="#">아이디찾기</a>
+                    <a href="#" class="user-menu__item-link">아이디찾기</a>
                   </li>
                   <li class="user-menu__item">
-                    <a href="#">상품공시실</a>
+                    <a href="#" class="user-menu__item-link">상품공시실</a>
                   </li>
                   <li class="user-menu__item">
-                    <a href="#">금용소비자보호포털</a>
+                    <a href="#" class="user-menu__item-link"
+                      >금용소비자보호포털</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -146,19 +148,27 @@
               <div id="allMenuWrap" class="bottom__all-menu-wrap hide">
                 <div class="all-menu">
                   <div class="all-menu__header">
-                    <div class="all-menu__header-util">
-                      <ul class="all-menu__lists">
-                        <li class="all-menu__item"><a href="#">홈</a></li>
-                        <li class="all-menu__item"><a href="#">회원가입</a></li>
-                        <li class="all-menu__item">
-                          <a href="#">
-                            <img src="/assets/images/ico-72-login1.png" alt="" /
-                            class="all-menu__login-icon"> 로그인
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="all-menu__close"></div>
+                    <ul class="all-menu__list">
+                      <li class="all-menu__item">
+                        <a href="#" class="all-menu__link">홈</a>
+                      </li>
+                      <li class="all-menu__item">
+                        <a href="#" class="all-menu__link">회원가입</a>
+                      </li>
+                      <li class="all-menu__item">
+                        <a href="#" class="all-menu__link">
+                          <img src="/assets/images/ico-72-login1.png" alt="" /
+                          class="all-menu__login-icon"> 로그인
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="all-menu__close">
+                      <img
+                        src="/assets/images/ico-72-close1.png"
+                        alt=""
+                        class="all-menu__close-icon"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -362,9 +372,9 @@
                   </a>
                 </li>
               </ul>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
