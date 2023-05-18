@@ -48,17 +48,25 @@
 
 .main-quickmenu__wrap {
   position: relative;
-  padding: 0 80px;
-  border-radius: 12px;
   background: #fff;
+  border-radius: 8px;
   box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
+
+  @include responsive(pc) {
+    padding: 0 80px;
+    border-radius: 12px;
+  }
 }
 
 .main-quickmenu {
   position: relative;
   display: block;
   max-width: 1200px;
-  height: 135px;
+  height: 190px;
+
+  @include responsive(pc) {
+    height: 135px;
+  }
 }
 
 .quickmenu__item-box {
@@ -83,9 +91,15 @@
 }
 
 .quickmenu__item-title {
+  height: 36px;
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.4;
+
+  @include responsive(pc) {
+    height: 58px;
+    font-size: 1.6rem;
+  }
 }
 
 .swiper-button-next,

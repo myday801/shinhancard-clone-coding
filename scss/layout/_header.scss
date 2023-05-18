@@ -44,10 +44,13 @@
 
   .header-top__utility-item {
     position: relative;
-    color: $gray;
-    font-size: 14px;
     padding: 8px 13px 8px 12px;
     cursor: pointer;
+  }
+
+  .top__utility-item-link {
+    color: $gray;
+    font-size: 14px;
     text-align: center;
   }
 
@@ -55,7 +58,7 @@
     content: "";
     position: absolute;
     right: 0;
-    top: 9px;
+    top: 15px;
     width: 1px;
     height: 12px;
     background: #ddd;
