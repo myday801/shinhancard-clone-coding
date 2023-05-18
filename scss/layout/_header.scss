@@ -306,15 +306,46 @@
     background: #fff;
   }
 
-  .bottom__right-menu-all {
+  .bottom__all-menu-wrap {
     position: absolute;
     left: 0;
     top: 0;
     display: block;
     z-index: 55;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: #fff;
+
+    @include responsive(pc) {
+      width: 100%;
+    }
+  }
+
+  .all-menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+  }
+
+  .all-menu__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    border-bottom: 5px solid #f4f7fc;
+    padding: 0px 24px;
+  }
+
+  .all-menu__header-util {
+    display: flex;
+    align-items: center;
+  }
+
+  .all-menu__login-icon {
+    width: 30px;
+    height: 30px;
   }
 
   .hide {

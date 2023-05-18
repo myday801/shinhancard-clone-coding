@@ -446,15 +446,43 @@ body {
   border-radius: 2px;
   background: #fff;
 }
-.header .bottom__right-menu-all {
+.header .bottom__all-menu-wrap {
   position: absolute;
   left: 0;
   top: 0;
   display: block;
   z-index: 55;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #fff;
+}
+@media (min-width: 1024px) {
+  .header .bottom__all-menu-wrap {
+    width: 100%;
+  }
+}
+.header .all-menu {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+.header .all-menu__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  border-bottom: 5px solid #f4f7fc;
+  padding: 0px 24px;
+}
+.header .all-menu__header-util {
+  display: flex;
+  align-items: center;
+}
+.header .all-menu__login-icon {
+  width: 30px;
+  height: 30px;
 }
 .header .hide {
   display: none;

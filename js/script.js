@@ -43,6 +43,6 @@ $(document).ready(function () {
 
   // all-menu toggle
   $("#allMenuButton").click(function () {
-    $(".bottom__right-menu-all").toggle();
+    $("#allMenuWrap").toggle();
   });
 });
