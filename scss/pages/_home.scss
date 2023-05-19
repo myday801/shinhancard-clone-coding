@@ -2,9 +2,14 @@
   position: relative;
   display: block;
   margin-top: 130px;
-  background: url("/assets/images/main_bg_pc.png") center center repeat;
+  background: url("/assets/images/main_bg_m.png") center center repeat;
   background-size: 100% 100%;
   overflow: hidden;
+
+  @include responsive(pc) {
+    background: url("/assets/images/main_bg_pc.png") repeat;
+    background-size: auto 100%;
+  }
 }
 
 .main__row {
@@ -27,7 +32,8 @@
 }
 
 .main-search__form {
-  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
 }
 
 .main-search__input {
@@ -36,7 +42,6 @@
   border: 2px solid #486eff;
   border-radius: 8px;
   box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
-  background: #fff;
   font-size: 20px;
   color: #999;
   background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px)
@@ -114,15 +119,26 @@
 }
 
 .swiper-button-next {
-  right: -20px;
+  right: -12px;
   background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
   background-size: 100% auto;
+
+  @include responsive(pc) {
+    right: -20px;
+  }
 }
 
 .swiper-button-prev {
-  left: -20px;
+  left: -12px;
   background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
   background-size: 100% auto;
+
+  // @include responsive(tablet) {
+  //   left: -20px;
+  // }
+  @include responsive(pc) {
+    left: -20px;
+  }
 }
 
 .swiper-button-next::after,
