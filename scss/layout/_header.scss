@@ -12,8 +12,8 @@
     position: relative;
     display: none;
     height: 56px;
-    background: #fff;
     padding: 0 40px;
+    background: #fff;
 
     @include responsive(pc) {
       display: block;
@@ -21,7 +21,6 @@
   }
 
   .header__row {
-    // position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,15 +65,13 @@
 
   .header-top__dropdown {
     position: relative;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     padding: 8px 13px 8px 12px;
   }
 
   .dropdown__button {
     border: 0;
     background: transparent;
+    font-family: $font-stack;
     font-size: 14px;
     color: $gray;
     cursor: pointer;
@@ -83,6 +80,7 @@
   .dropdown__arrow {
     width: 16px;
     height: 16px;
+    margin-bottom: 2px;
   }
 
   .dropdown__menu {
@@ -146,7 +144,7 @@
     position: absolute;
     display: block;
     left: 0;
-    top: 2px;
+    top: 1px;
     width: 1px;
     height: 12px;
     background-color: #ddd;
@@ -157,7 +155,6 @@
     position: relative;
     display: block;
     height: 102px;
-    padding: 0 40px;
 
     @include responsive(tablet) {
       height: 98px;
@@ -165,6 +162,7 @@
 
     @include responsive(pc) {
       height: 74px;
+      padding: 0 40px;
     }
   }
 
@@ -296,9 +294,7 @@
   }
 
   .header-bottom__right {
-    position: absolute;
-    top: 13px;
-    right: 20px;
+    position: relative;
     display: flex;
   }
 
@@ -309,12 +305,17 @@
   }
 
   .bottom__right-loginbtn {
+    display: block;
     height: 24px;
     padding: 0 8px;
     line-height: 22px;
     border: 1px solid #ccc;
     border-radius: 2px;
     background: #fff;
+
+    @include responsive(pc) {
+      display: none;
+    }
   }
 
   .bottom__all-menu-wrap {
@@ -358,9 +359,17 @@
     font-size: 1.4rem;
   }
 
+  .all-menu__item:last-child {
+    width: auto;
+    padding-left: 22px;
+    background: url("../../assets/images/ico-72-login1.png") left center
+      no-repeat;
+    background-size: 25px auto;
+  }
+
   .all-menu__login-icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .all-menu__close-icon {

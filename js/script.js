@@ -42,7 +42,7 @@ $(document).ready(function () {
   });
 
   // all-menu toggle
-  $("#allMenuButton").click(function () {
+  $("#allMenuButton, .all-menu__close").click(function () {
     $("#allMenuWrap").toggle();
   });
 });
