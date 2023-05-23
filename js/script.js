@@ -15,14 +15,6 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next1",
       prevEl: ".swiper-button-prev1",
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 8,
-      },
-      1024: {
-        slidesPerView: 8,
-      },
-    },
   });
 
   // Main quick menu swiper

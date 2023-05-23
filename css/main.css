@@ -224,7 +224,7 @@ swiper-container {
 .swiper-slide,
 swiper-slide {
   flex-shrink: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   position: relative;
   transition-property: transform;
@@ -1115,7 +1115,6 @@ body {
 .header .gnb-navbar {
   position: relative;
   display: flex;
-  width: auto;
 }
 .header .navbar-menu__item {
   padding: 0 15px;
