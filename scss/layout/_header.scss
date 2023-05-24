@@ -194,10 +194,6 @@
     bottom: 0;
     display: block;
 
-    @include responsive(tablet) {
-      position: static;
-    }
-
     @include responsive(pc) {
       position: static;
     }
@@ -206,7 +202,6 @@
   .gnb-navbar {
     position: relative;
     display: flex;
-    justify-content: center;
   }
 
   .navbar-menu__item {
@@ -236,6 +231,23 @@
 
   .navbar-menu__item-link:visited {
     color: #222;
+  }
+
+  .swiper-button-next1,
+  .swiper-button-prev1 {
+    bottom: 6px;
+    width: 15px;
+    right: -12px;
+    opacity: 0.5;
+    height: 30px;
+    background: url("../../assets/images/btn_gnb_ar.png") no-repeat center
+      center;
+    background-size: auto 13px;
+  }
+
+  .swiper-button-prev1 {
+    left: -12px;
+    transform: rotate(-180deg);
   }
 
   .menu__depth2 {
