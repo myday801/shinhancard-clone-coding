@@ -169,6 +169,10 @@
     }
   }
 
+  .header-bottom__row {
+    justify-content: space-between;
+  }
+
   .header-logo__image {
     width: auto;
     height: 24px;
@@ -187,8 +191,12 @@
   .header-bottom__middle {
     position: absolute;
     left: 0;
-    top: 50px;
+    bottom: 0;
     display: block;
+
+    @include responsive(tablet) {
+      position: static;
+    }
 
     @include responsive(pc) {
       position: static;
@@ -198,6 +206,7 @@
   .gnb-navbar {
     position: relative;
     display: flex;
+    justify-content: center;
   }
 
   .navbar-menu__item {

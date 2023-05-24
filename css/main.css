@@ -1085,6 +1085,9 @@ body {
     padding: 0 40px;
   }
 }
+.header .header-bottom__row {
+  justify-content: space-between;
+}
 .header .header-logo__image {
   width: auto;
   height: 24px;
@@ -1104,8 +1107,13 @@ body {
 .header .header-bottom__middle {
   position: absolute;
   left: 0;
-  top: 50px;
+  bottom: 0;
   display: block;
+}
+@media (min-width: 768px) {
+  .header .header-bottom__middle {
+    position: static;
+  }
 }
 @media (min-width: 1024px) {
   .header .header-bottom__middle {
@@ -1115,6 +1123,7 @@ body {
 .header .gnb-navbar {
   position: relative;
   display: flex;
+  justify-content: center;
 }
 .header .navbar-menu__item {
   padding: 0 15px;
