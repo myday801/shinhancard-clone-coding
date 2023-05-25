@@ -19,12 +19,28 @@ $(document).ready(function () {
 
   // Main quick menu swiper
   var swiper2 = new Swiper(".swiper2", {
-    slidesPerView: 8,
-    loop: true,
+    slidesPerView: 4,
     slidesPerGroup: 8,
+    grid: {
+      rows: 2,
+    },
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        slidesPerGroup: 8,
+        grid: {
+          rows: 2,
+        },
+      },
+      1024: {
+        slidesPerView: 8,
+        slidesPerGroup: 8,
+      },
     },
   });
 

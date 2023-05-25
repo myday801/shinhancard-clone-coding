@@ -92,6 +92,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50%;
+
+  @include responsive(pc) {
+    height: auto;
+  }
 }
 
 .quickmenu-icon {
@@ -136,9 +141,6 @@
   background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
   background-size: 100% auto;
 
-  // @include responsive(tablet) {
-  //   left: -20px;
-  // }
   @include responsive(pc) {
     left: -20px;
   }
