@@ -193,7 +193,7 @@
     left: 50%;
     bottom: 0;
     display: block;
-    width: 90%;
+    width: 100%;
     transform: translateX(-50%);
 
     @include responsive(tablet) {
@@ -206,6 +206,18 @@
       position: static;
       width: auto;
       transform: translateX(0);
+    }
+  }
+
+  .header-bottom__middle {
+    width: 94%;
+
+    @include responsive(tablet) {
+      width: 100%;
+    }
+
+    @include responsive(pc) {
+      width: 100%;
     }
   }
 
@@ -254,6 +266,14 @@
     background: url("../../assets/images/btn_gnb_ar.png") no-repeat center
       center;
     background-size: auto 13px;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+
+    @include responsive(pc) {
+      display: none;
+    }
   }
 
   .swiper-button-next1 {
