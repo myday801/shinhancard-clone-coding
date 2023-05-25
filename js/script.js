@@ -46,6 +46,13 @@ $(document).ready(function () {
     },
   });
 
+  var swiper3 = new Swiper(".js-my-swiper", {
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  });
+
   // 마이카 button
   $("#mycarButton, .dropdown__close-button").click(function () {
     $(".dropdown__menu").toggle();
