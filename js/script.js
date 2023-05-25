@@ -21,7 +21,6 @@ $(document).ready(function () {
   var swiper2 = new Swiper(".swiper2", {
     slidesPerView: 4,
     slidesPerGroup: 8,
-    loop: true,
     grid: {
       rows: 2,
     },

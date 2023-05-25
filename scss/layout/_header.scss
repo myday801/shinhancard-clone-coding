@@ -188,21 +188,24 @@
     }
   }
 
-  .header-bottom__middle {
+  .header-bottom__middle-wrap {
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     display: block;
-    width: 100%;
+    width: 90%;
+    transform: translateX(-50%);
 
     @include responsive(tablet) {
       position: static;
       width: auto;
+      transform: translateX(0);
     }
 
     @include responsive(pc) {
       position: static;
       width: auto;
+      transform: translateX(0);
     }
   }
 
@@ -245,8 +248,9 @@
     position: absolute;
     top: -7px;
     width: 15px;
-    opacity: 0.5;
     height: 30px;
+    z-index: 50;
+    opacity: 0.5;
     background: url("../../assets/images/btn_gnb_ar.png") no-repeat center
       center;
     background-size: auto 13px;
