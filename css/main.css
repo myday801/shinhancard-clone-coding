@@ -782,7 +782,7 @@ swiper-container .swiper-notification {
 
 .swiper-grid-column > .swiper-wrapper {
   flex-wrap: wrap;
-  flex-direction: inherit;
+  flex-direction: column;
 }
 
 .swiper-fade.swiper-free-mode .swiper-slide {

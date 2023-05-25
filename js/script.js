@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
 
   // Main quick menu swiper
-  var swiper2 = new Swiper(".swiper2", {
+  var swiper2 = new Swiper(".js-quickmenu-swiper", {
     slidesPerView: 4,
     slidesPerGroup: 8,
     grid: {
@@ -46,11 +46,25 @@ $(document).ready(function () {
     },
   });
 
+  // js-my-swiper
   var swiper3 = new Swiper(".js-my-swiper", {
     navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev3",
+      nextEl: ".swiper-button-next3",
     },
+    autoplay: true,
+  });
+  // js-my-swiper play/stop control button
+  $(".swiper-button-play").hide();
+  $(".swiper-button-stop").click(function () {
+    swiper3.autoplay.stop();
+    $(this).toggle();
+    $(".swiper-button-play").toggle();
+  });
+  $(".swiper-button-play").click(function () {
+    swiper3.autoplay.start();
+    $(this).toggle();
+    $(".swiper-button-stop").toggle();
   });
 
   // 마이카 button
@@ -64,27 +78,28 @@ $(document).ready(function () {
   });
 });
 
+// quickmenu icon 넣기
 // 이름 넣을 배열
 let imgList = [
   "icon-150-type2-1.png",
   "icon-150-type2-2.png",
-  "icon-150-type2-3.png",
   "icon-150-type2-4.png",
   "icon-150-type2-5.png",
   "icon-150-type2-6.png",
   "icon-150-type2-7.png",
   "icon-150-type2-8.png",
+  "icon-150-type2-15.png",
   "icon-150-type2-9.png",
   "icon-150-type2-10.png",
   "icon-150-type2-11.png",
   "icon-150-type2-12.png",
   "icon-150-type2-13.png",
   "icon-150-type2-14.png",
-  "icon-150-type2-15.png",
+  "icon-150-type2-3.png",
   "icon-150-type2-16.png",
 ];
 
-let imgLi = document.querySelectorAll(".main-quickmenu__lists li");
+let imgLi = document.querySelectorAll(".main-quickmenu__list li");
 
 for (let i = 0; i < imgLi.length; i++) {
   imgLi[i].querySelector("img").src = "../../assets/images/" + imgList[i];
