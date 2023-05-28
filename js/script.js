@@ -19,53 +19,34 @@ $(document).ready(function () {
 
   // Main quick menu swiper
   var swiper2 = new Swiper(".js-quickmenu-swiper", {
-    slidesPerView: 4,
+    slidesPerView: 8,
     slidesPerGroup: 8,
-    grid: {
-      rows: 2,
-    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 4,
-        slidesPerGroup: 8,
-        grid: {
-          rows: 2,
-        },
-      },
-      1024: {
-        slidesPerView: 8,
-        slidesPerGroup: 8,
-        grid: {
-          rows: 1,
-        },
-      },
+      prevEl: ".quickmenu-button-prev",
+      nextEl: ".quickmenu-button-next",
     },
   });
 
   // js-my-swiper
-  var swiper3 = new Swiper(".js-my-swiper", {
-    navigation: {
-      prevEl: ".swiper-button-prev3",
-      nextEl: ".swiper-button-next3",
-    },
-    autoplay: true,
-  });
+  // var swiper3 = new Swiper(".js-my-swiper", {
+  //   navigation: {
+  //     prevEl: ".swiper-button-prev3",
+  //     nextEl: ".swiper-button-next3",
+  //   },
+  //   autoplay: true,
+  // });
   // js-my-swiper play/stop control button
-  $(".swiper-button-play").hide();
-  $(".swiper-button-stop").click(function () {
-    swiper3.autoplay.stop();
-    $(this).toggle();
-    $(".swiper-button-play").toggle();
-  });
-  $(".swiper-button-play").click(function () {
-    swiper3.autoplay.start();
-    $(this).toggle();
-    $(".swiper-button-stop").toggle();
-  });
+  // $(".swiper-button-play").hide();
+  // $(".swiper-button-stop").click(function () {
+  //   swiper3.autoplay.stop();
+  //   $(this).toggle();
+  //   $(".swiper-button-play").toggle();
+  // });
+  // $(".swiper-button-play").click(function () {
+  //   swiper3.autoplay.start();
+  //   $(this).toggle();
+  //   $(".swiper-button-stop").toggle();
+  // });
 
   // 마이카 button
   $("#mycarButton, .dropdown__close-button").click(function () {
@@ -99,8 +80,8 @@ let imgList = [
   "icon-150-type2-16.png",
 ];
 
-let imgLi = document.querySelectorAll(".main-quickmenu__list li");
+let imgLi = document.querySelectorAll(".quickmenu__list li");
 
 for (let i = 0; i < imgLi.length; i++) {
-  imgLi[i].querySelector("img").src = "../../assets/images/" + imgList[i];
+  imgLi[i].querySelector("img").src = "./assets/images/" + imgList[i];
 }

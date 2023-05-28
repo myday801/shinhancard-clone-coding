@@ -56,7 +56,7 @@
 
 // Quick menu
 
-.main-quickmenu__wrap {
+.quickmenu__wrap {
   position: relative;
   background: #fff;
   border-radius: 8px;
@@ -68,7 +68,7 @@
   }
 }
 
-.main-quickmenu {
+.quickmenu {
   position: relative;
   display: block;
   max-width: 1200px;
@@ -77,6 +77,37 @@
   @include responsive(pc) {
     height: 135px;
   }
+}
+
+.quickmenu__content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.quickmenu__content-2 {
+  display: none;
+}
+
+.quickmenu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+
+  @include responsive(pc) {
+    height: 100%;
+  }
+}
+
+.quickmenu__item {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: 50%;
+
+  // @include responsive(pc) {
+  //   height: auto;
+  // }
 }
 
 .quickmenu__item-box {
@@ -90,18 +121,7 @@
   font-size: 16px;
 }
 
-.main-quickmenu__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-
-  @include responsive(pc) {
-    height: auto;
-  }
-}
-
-.quickmenu-icon {
+.quickmenu__icon {
   width: 40px;
 }
 
@@ -117,8 +137,8 @@
   }
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.quickmenu-button-prev,
+.quickmenu-button-next {
   width: 24px;
   height: 24px;
 
@@ -128,23 +148,23 @@
   }
 }
 
-.swiper-button-next {
-  right: -12px;
-  background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
-  background-size: 100% auto;
-
-  @include responsive(pc) {
-    right: -20px;
-  }
-}
-
-.swiper-button-prev {
+.quickmenu-button-prev {
   left: -12px;
   background: url("../../assets/images/arr1-72-l-a.png") center center no-repeat;
   background-size: 100% auto;
 
   @include responsive(pc) {
     left: -20px;
+  }
+}
+
+.quickmenu-button-next {
+  right: -12px;
+  background: url("../../assets/images/arr1-72-r-a.png") center center no-repeat;
+  background-size: 100% auto;
+
+  @include responsive(pc) {
+    right: -20px;
   }
 }
 
