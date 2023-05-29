@@ -22,8 +22,8 @@ $(document).ready(function () {
     slidesPerView: 8,
     slidesPerGroup: 8,
     navigation: {
-      prevEl: ".quickmenu-button-prev",
-      nextEl: ".quickmenu-button-next",
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
     },
   });
 
@@ -58,30 +58,3 @@ $(document).ready(function () {
     $("#allMenuWrap").toggle();
   });
 });
-
-// quickmenu icon 넣기
-// 이름 넣을 배열
-let imgList = [
-  "icon-150-type2-1.png",
-  "icon-150-type2-2.png",
-  "icon-150-type2-4.png",
-  "icon-150-type2-5.png",
-  "icon-150-type2-6.png",
-  "icon-150-type2-7.png",
-  "icon-150-type2-8.png",
-  "icon-150-type2-15.png",
-  "icon-150-type2-9.png",
-  "icon-150-type2-10.png",
-  "icon-150-type2-11.png",
-  "icon-150-type2-12.png",
-  "icon-150-type2-13.png",
-  "icon-150-type2-14.png",
-  "icon-150-type2-3.png",
-  "icon-150-type2-16.png",
-];
-
-let imgLi = document.querySelectorAll(".quickmenu__list li");
-
-for (let i = 0; i < imgLi.length; i++) {
-  imgLi[i].querySelector("img").src = "./assets/images/" + imgList[i];
-}
