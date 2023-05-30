@@ -58,3 +58,13 @@ $(document).ready(function () {
     $("#allMenuWrap").toggle();
   });
 });
+
+// Promotion background-image 삽입
+
+let slideData = [
+  { image: "" },
+  { image: "" },
+  // ...
+];
+
+const promotionImg = document.querySelectorAll(".swiper-slide");

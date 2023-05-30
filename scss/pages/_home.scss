@@ -17,7 +17,7 @@
   }
 }
 
-.main__row {
+.useful-group__row {
   width: 100%;
   height: 100%;
 }
@@ -171,4 +171,53 @@
 
 .hide {
   display: none;
+}
+
+// Promotion section
+.promotion-group {
+  position: relative;
+
+  @include responsive(pc) {
+    padding: 0 40px;
+  }
+}
+
+.promotion-group__row {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+}
+
+.promotion__list {
+  margin: 0 auto;
+}
+
+.promotion__item {
+  width: 100%;
+  height: 140px;
+
+  @include responsive(tablet) {
+    height: auto;
+    background: #f9f9f9;
+  }
+
+  @include responsive(pc) {
+    max-width: 410px;
+    height: 170px;
+    padding: 0 30px;
+    border-radius: 12px;
+  }
+}
+
+.promotion__img {
+  position: absolute;
+  right: 40px;
+  width: 140px;
+  height: 140px;
+}
+
+.promotion__desc {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
 }

@@ -99,7 +99,8 @@ a {
 }
 
 a:visited {
-  color: #494f60;
+  color: inherit;
+  // color: #494f60;
 }
 
 /* HTML5 display-role reset for older browsers */
