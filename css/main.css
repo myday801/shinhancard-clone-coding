@@ -1562,12 +1562,19 @@ body {
 
 .promotion__img {
   position: absolute;
-  right: 40px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 140px;
   height: 140px;
+  background: center center no-repeat;
+  background-size: 100% auto;
 }
 
 .promotion__desc {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;

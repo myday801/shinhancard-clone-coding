@@ -62,13 +62,13 @@ $(document).ready(function () {
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 70,
     loop: true,
     centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
