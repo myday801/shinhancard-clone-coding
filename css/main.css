@@ -1553,7 +1553,7 @@ body {
 }
 @media (min-width: 1024px) {
   .promotion__item {
-    max-width: 410px;
+    max-width: 350px;
     height: 170px;
     padding: 0 30px;
     border-radius: 12px;

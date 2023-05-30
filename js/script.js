@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  // 마이카 button
+  $("#mycarButton, .dropdown__close-button").click(function () {
+    $(".dropdown__menu").toggle();
+  });
+
+  // Gnb dropdown menu
   $(".navbar-menu__item").hover(
     function () {
       $(this).find(".menu__depth2").stop().slideDown(200);
@@ -48,23 +54,46 @@ $(document).ready(function () {
   //   $(".swiper-button-stop").toggle();
   // });
 
-  // 마이카 button
-  $("#mycarButton, .dropdown__close-button").click(function () {
-    $(".dropdown__menu").toggle();
-  });
-
   // all-menu toggle
   $("#allMenuButton, .all-menu__close").click(function () {
     $("#allMenuWrap").toggle();
   });
+
+  // Promotion swiper
+  var swiper3 = new Swiper(".js-promotion-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  });
 });
 
-// Promotion background-image 삽입
-
-let slideData = [
-  { image: "" },
-  { image: "" },
-  // ...
+// Promotion background-image
+let promotionImgList = [
+  "thumbnail_vips",
+  "honsoo_hotbn",
+  "coupon_hotBanner",
+  "ai_hotbn",
+  "global_invome_tax_hotbn",
+  "six_hotbn",
+  "labang_hotbn",
+  "account_mainbn",
+  "global_shop_hotBanner",
+  "allthat_hotbanner",
 ];
 
-const promotionImg = document.querySelectorAll(".swiper-slide");
+let promotionImg = document.querySelectorAll(".promotion__img");
+
+for (let i = 0; i < promotionImg.length; i++) {
+  promotionImg[
+    i
+  ].style.backgroundImage = `url(./assets/images/promotion/${promotionImgList[i]}.png)`;
+}
