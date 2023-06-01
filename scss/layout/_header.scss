@@ -383,26 +383,36 @@
   }
 
   // 전체메뉴
-  .bottom__all-menu-wrap {
-    position: absolute;
+  .all-menu-wrap {
+    position: fixed;
     left: 0;
     top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+
+  .all-menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     display: block;
     z-index: 55;
     width: 100vw;
     height: 100vh;
     background: #fff;
-    z-index: 500;
+    transform: translate(-50%, -50%);
 
-    @include responsive(pc) {
-      width: 100%;
-    }
-  }
-
-  .all-menu {
-    width: 100%;
     @include responsive(pc) {
       max-width: 1200px;
+      width: 1200px;
+      height: 768px;
+      max-height: 80%;
+      border-radius: 12px;
     }
   }
 
@@ -418,6 +428,10 @@
     padding: 0px 24px;
     background: #fff;
     border-bottom: 5px solid #f4f7fc;
+
+    @include responsive(pc) {
+      border: 0;
+    }
   }
 
   .all-menu__list {
@@ -478,11 +492,10 @@
     height: 40px;
     padding: 0px 17px;
     font-size: 1.4rem;
+    line-height: 2.8;
     color: #666;
     background: #f8f8f8;
-
     border-radius: 40px;
-    line-height: 3;
   }
 
   .all-menu__nav-link:active {

@@ -1287,28 +1287,37 @@ body {
     display: none;
   }
 }
-.header .bottom__all-menu-wrap {
-  position: absolute;
+.header .all-menu-wrap {
+  position: fixed;
   left: 0;
   top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.header .all-menu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
   z-index: 55;
   width: 100vw;
   height: 100vh;
   background: #fff;
-  z-index: 500;
-}
-@media (min-width: 1024px) {
-  .header .bottom__all-menu-wrap {
-    width: 100%;
-  }
-}
-.header .all-menu {
-  width: 100%;
+  transform: translate(-50%, -50%);
 }
 @media (min-width: 1024px) {
   .header .all-menu {
     max-width: 1200px;
+    width: 1200px;
+    height: 768px;
+    max-height: 80%;
+    border-radius: 12px;
   }
 }
 .header .all-menu__header {
@@ -1321,6 +1330,11 @@ body {
   padding: 0px 24px;
   background: #fff;
   border-bottom: 5px solid #f4f7fc;
+}
+@media (min-width: 1024px) {
+  .header .all-menu__header {
+    border: 0;
+  }
 }
 .header .all-menu__list {
   display: flex;
@@ -1368,10 +1382,10 @@ body {
   height: 40px;
   padding: 0px 17px;
   font-size: 1.4rem;
+  line-height: 2.8;
   color: #666;
   background: #f8f8f8;
   border-radius: 40px;
-  line-height: 3;
 }
 .header .all-menu__nav-link:active {
   color: #fff;
@@ -1557,6 +1571,24 @@ body {
   display: none;
 }
 
+.swiper-controls {
+  display: block;
+  margin: 6px 0 2px 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .swiper-controls {
+    margin: 8px 0 1px 0;
+  }
+}
+
+.swiper-pagination {
+  background: #383b5a;
+  width: 16px;
+  height: 6px;
+  border-radius: 3px;
+}
+
 .promotion-group {
   position: relative;
 }
@@ -1583,7 +1615,7 @@ body {
 .promotion__item {
   width: 70%;
   height: 140px;
-  padding: 0 30px;
+  padding-right: 30px;
   background: #f9f9f9;
   border-radius: 8px;
 }
@@ -1591,6 +1623,7 @@ body {
   .promotion__item {
     max-width: 350px;
     height: 170px;
+    padding: 0 30px;
     border-radius: 12px;
   }
 }
@@ -1622,22 +1655,4 @@ body {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
-}
-
-.promotion-swiper-controls {
-  display: block;
-  margin: 6px 0 2px 0;
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  .promotion-swiper-controls {
-    margin: 8px 0 1px 0;
-  }
-}
-
-.swiper-pagination {
-  background: #383b5a;
-  width: 16px;
-  height: 6px;
-  border-radius: 3px;
 }

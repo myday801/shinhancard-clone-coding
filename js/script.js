@@ -32,6 +32,11 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev.test",
       nextEl: ".swiper-button-next.test",
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
   });
 
   // js-my-swiper
