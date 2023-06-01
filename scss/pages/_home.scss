@@ -135,6 +135,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  z-index: 100;
   width: 24px;
   height: 24px;
 
@@ -242,4 +243,11 @@
   @include responsive(pc) {
     margin: 8px 0 1px 0;
   }
+}
+
+.swiper-pagination {
+  background: #383b5a;
+  width: 16px;
+  height: 6px;
+  border-radius: 3px;
 }

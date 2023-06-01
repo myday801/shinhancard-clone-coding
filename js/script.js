@@ -27,9 +27,10 @@ $(document).ready(function () {
   var swiper2 = new Swiper(".js-quickmenu-swiper", {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    loop: true,
     navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev.test",
+      nextEl: ".swiper-button-next.test",
     },
   });
 
@@ -64,13 +65,18 @@ $(document).ready(function () {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
+      prevEl: ".promotion-button-prev.test2",
+      nextEl: ".promotion-button-next.test2",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
     },
     breakpoints: {
       1024: {
