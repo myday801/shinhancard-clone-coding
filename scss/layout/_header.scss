@@ -382,6 +382,7 @@
     }
   }
 
+  // 전체메뉴
   .bottom__all-menu-wrap {
     position: absolute;
     left: 0;
@@ -391,6 +392,7 @@
     width: 100vw;
     height: 100vh;
     background: #fff;
+    z-index: 500;
 
     @include responsive(pc) {
       width: 100%;
@@ -398,8 +400,13 @@
   }
 
   .all-menu {
-    max-width: 1200px;
+    width: 100%;
+    @include responsive(pc) {
+      max-width: 1200px;
+    }
   }
+
+  // 전체메뉴 header
 
   .all-menu__header {
     position: relative;
@@ -440,6 +447,47 @@
   .all-menu__close-icon {
     width: 30px;
     height: 30px;
+  }
+
+  // 전체메뉴 nav
+
+  .all-menu__nav {
+    position: relative;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0px 24px;
+    z-index: 13;
+  }
+
+  .all-menu__nav-list {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .all-menu__nav-item {
+    width: auto;
+    margin-left: 6px;
+  }
+
+  .all-menu__nav-item:first-child {
+    margin-left: 0;
+  }
+
+  .all-menu__nav-link {
+    display: block;
+    height: 40px;
+    padding: 0px 17px;
+    font-size: 1.4rem;
+    color: #666;
+    background: #f8f8f8;
+
+    border-radius: 40px;
+    line-height: 3;
+  }
+
+  .all-menu__nav-link:active {
+    color: #fff;
+    background: #383b5a;
   }
 
   .hide {

@@ -70,8 +70,8 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     navigation: {
-      prevEl: ".promotion-button-prev.test2",
-      nextEl: ".promotion-button-next.test2",
+      prevEl: ".swiper-button-prev.test2",
+      nextEl: ".swiper-button-next.test2",
     },
     pagination: {
       el: ".swiper-pagination",

@@ -1296,6 +1296,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: #fff;
+  z-index: 500;
 }
 @media (min-width: 1024px) {
   .header .bottom__all-menu-wrap {
@@ -1303,7 +1304,12 @@ body {
   }
 }
 .header .all-menu {
-  max-width: 1200px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .header .all-menu {
+    max-width: 1200px;
+  }
 }
 .header .all-menu__header {
   position: relative;
@@ -1338,6 +1344,38 @@ body {
 .header .all-menu__close-icon {
   width: 30px;
   height: 30px;
+}
+.header .all-menu__nav {
+  position: relative;
+  height: 40px;
+  margin-top: 20px;
+  padding: 0px 24px;
+  z-index: 13;
+}
+.header .all-menu__nav-list {
+  width: 100%;
+  margin: 0 auto;
+}
+.header .all-menu__nav-item {
+  width: auto;
+  margin-left: 6px;
+}
+.header .all-menu__nav-item:first-child {
+  margin-left: 0;
+}
+.header .all-menu__nav-link {
+  display: block;
+  height: 40px;
+  padding: 0px 17px;
+  font-size: 1.4rem;
+  color: #666;
+  background: #f8f8f8;
+  border-radius: 40px;
+  line-height: 3;
+}
+.header .all-menu__nav-link:active {
+  color: #fff;
+  background: #383b5a;
 }
 .header .hide {
   display: none;
@@ -1481,7 +1519,6 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  z-index: 100;
   width: 24px;
   height: 24px;
 }
