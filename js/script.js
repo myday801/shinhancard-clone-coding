@@ -25,8 +25,8 @@ $(document).ready(function () {
 
   // Main quick menu swiper
   var swiper2 = new Swiper(".js-quickmenu-swiper", {
-    slidesPerView: 8,
-    slidesPerGroup: 8,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
@@ -61,8 +61,7 @@ $(document).ready(function () {
 
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 70,
+    slidesPerView: 1,
     loop: true,
     centeredSlides: true,
     // autoplay: {
@@ -72,6 +71,12 @@ $(document).ready(function () {
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 70,
+      },
     },
   });
 });
