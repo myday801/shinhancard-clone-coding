@@ -170,19 +170,25 @@
 }
 
 .swiper-controls {
-  display: block;
-  margin: 6px 0 2px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 0;
   text-align: center;
 
   @include responsive(pc) {
-    margin: 8px 0 1px 0;
+    margin: 20px 0;
   }
 }
 
 .swiper-pagination {
-  background: #383b5a;
+  display: block;
+}
+
+.swiper-pagination-bullets {
   width: 16px;
   height: 6px;
+  background: #383b5a;
   border-radius: 3px;
 }
 
@@ -250,4 +256,26 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
+}
+
+.swiper-button-play {
+  width: 20px;
+  height: 18px;
+  margin-right: 20px;
+  background: #f1f1f3 url("../../assets/images/ico-48-control1-a.png") center
+    center no-repeat;
+  background-size: 16px auto;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.swiper-button-pause {
+  width: 20px;
+  height: 18px;
+  margin-right: 20px;
+  background: #f1f1f3 url("../../assets/images/ico-48-control1-b.png") center
+    center no-repeat;
+  background-size: 16px auto;
+  border-radius: 4px;
+  cursor: pointer;
 }

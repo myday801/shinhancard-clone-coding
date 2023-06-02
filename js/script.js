@@ -39,27 +39,6 @@ $(document).ready(function () {
     },
   });
 
-  // js-my-swiper
-  // var swiper3 = new Swiper(".js-my-swiper", {
-  //   navigation: {
-  //     prevEl: ".swiper-button-prev3",
-  //     nextEl: ".swiper-button-next3",
-  //   },
-  //   autoplay: true,
-  // });
-  // js-my-swiper play/stop control button
-  // $(".swiper-button-play").hide();
-  // $(".swiper-button-stop").click(function () {
-  //   swiper3.autoplay.stop();
-  //   $(this).toggle();
-  //   $(".swiper-button-play").toggle();
-  // });
-  // $(".swiper-button-play").click(function () {
-  //   swiper3.autoplay.start();
-  //   $(this).toggle();
-  //   $(".swiper-button-stop").toggle();
-  // });
-
   // all-menu toggle
   $("#allMenuButton, .all-menu__close").click(function () {
     $("#allMenuWrap").toggle();
@@ -81,7 +60,6 @@ $(document).ready(function () {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-      dynamicBullets: true,
     },
     breakpoints: {
       1024: {
@@ -89,6 +67,19 @@ $(document).ready(function () {
         spaceBetween: 70,
       },
     },
+  });
+
+  // Promotion swiper play/stop control button
+  $(".swiper-button-play").hide();
+  $(".swiper-button-pause").click(function () {
+    swiper3.autoplay.stop();
+    $(this).toggle();
+    $(".swiper-button-play").toggle();
+  });
+  $(".swiper-button-play").click(function () {
+    swiper3.autoplay.start();
+    $(this).toggle();
+    $(".swiper-button-pause").toggle();
   });
 });
 
