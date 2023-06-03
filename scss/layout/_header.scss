@@ -431,20 +431,31 @@
 
     @include responsive(pc) {
       border: 0;
+      border-radius: 12px;
     }
   }
 
-  .all-menu__list {
-    display: flex;
-    align-items: center;
+  .all-menu__title {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 900;
   }
 
-  .all-menu__link {
+  .all-menu__header-list {
+    display: flex;
+    align-items: center;
+
+    @include responsive(pc) {
+      display: none;
+    }
+  }
+
+  .all-menu__header-link {
     padding: 0 5px;
     font-size: 1.4rem;
   }
 
-  .all-menu__item:last-child {
+  .all-menu__header-item:last-child {
     width: auto;
     padding-left: 16px;
     font-size: 1.4rem;
@@ -461,15 +472,17 @@
   .all-menu__close-icon {
     width: 30px;
     height: 30px;
+    cursor: pointer;
   }
 
   // 전체메뉴 nav
 
+  .all-menu__nav-wrap {
+    padding: 20px 30px;
+  }
+
   .all-menu__nav {
     position: relative;
-    height: 40px;
-    margin-top: 20px;
-    padding: 0px 24px;
     z-index: 13;
   }
 
@@ -489,17 +502,18 @@
 
   .all-menu__nav-link {
     display: block;
-    height: 40px;
-    padding: 0px 17px;
+    height: 36px;
+    padding: 0px 16px;
     font-size: 1.4rem;
-    line-height: 2.8;
+    line-height: 2.6;
     color: #666;
     background: #f8f8f8;
     border-radius: 40px;
   }
 
-  .all-menu__nav-link:active {
+  .all-menu__active {
     color: #fff;
+    font-weight: 600;
     background: #383b5a;
   }
 
