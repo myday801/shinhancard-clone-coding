@@ -1618,11 +1618,21 @@ body {
   top: -6px !important;
 }
 
-.swiper-pagination-bullet {
+.swiper-pagination-bullet-active {
   width: 16px;
   height: 6px;
   background: #383b5a;
   border-radius: 3px;
+}
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+  transform-origin: left;
 }
 
 .promotion-group {
@@ -1669,7 +1679,7 @@ body {
 }
 @media (min-width: 1024px) {
   .promotion__item {
-    max-width: 350px;
+    width: 310px;
     height: 170px;
     padding: 0 30px;
     border-radius: 12px;

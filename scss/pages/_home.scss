@@ -202,11 +202,21 @@
   top: -6px !important;
 }
 
-.swiper-pagination-bullet {
+.swiper-pagination-bullet-active {
   width: 16px;
   height: 6px;
   background: #383b5a;
   border-radius: 3px;
+}
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+  transform-origin: left;
 }
 
 // Promotion section
@@ -252,7 +262,7 @@
   border-radius: 8px;
 
   @include responsive(pc) {
-    max-width: 350px;
+    width: 310px;
     height: 170px;
     padding: 0 30px;
     border-radius: 12px;
