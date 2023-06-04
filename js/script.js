@@ -5,14 +5,14 @@ $(document).ready(function () {
   });
 
   // Gnb dropdown menu
-  $(".navbar-menu__item").hover(
-    function () {
-      $(this).find(".menu__depth2").stop().slideDown(200);
-    },
-    function () {
-      $(this).find(".menu__depth2").stop().slideUp(200);
-    }
-  );
+  // $(".navbar-menu__item").hover(
+  //   function () {
+  //     $(this).find(".menu__depth2").stop().slideDown(200);
+  //   },
+  //   function () {
+  //     $(this).find(".menu__depth2").stop().slideUp(200);
+  //   }
+  // );
 
   // Gnb swiper
   var swiper1 = new Swiper(".swiper1", {
@@ -33,9 +33,8 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next.test",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".quickmenu-swiper__pagination",
       clickable: true,
-      dynamicBullets: true,
     },
   });
 
@@ -58,7 +57,7 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next.test2",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".promotion-swiper__pagination",
       clickable: true,
     },
     breakpoints: {

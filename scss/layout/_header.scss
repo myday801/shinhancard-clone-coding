@@ -191,22 +191,19 @@
 
   .header-bottom__middle-wrap {
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
     display: block;
     width: 100%;
-    transform: translateX(-50%);
 
     @include responsive(tablet) {
       position: static;
       width: auto;
-      transform: translateX(0);
     }
 
     @include responsive(pc) {
       position: static;
       width: auto;
-      transform: translateX(0);
     }
   }
 
@@ -219,12 +216,14 @@
 
     @include responsive(pc) {
       width: 100%;
+      overflow: unset;
     }
   }
 
   .gnb-navbar {
     position: relative;
     display: flex;
+    transform: none;
   }
 
   .navbar-menu__item {
@@ -235,6 +234,7 @@
     color: #222;
     word-break: keep-all;
     word-wrap: break-word;
+    transform: none;
 
     @include responsive(tablet) {
       font-size: 18px;
@@ -287,10 +287,9 @@
   }
 
   .menu__depth2 {
-    position: absolute;
-    top: 40px;
+    position: fixed;
+    top: 56px;
     left: 0;
-    display: none;
     z-index: 100;
     width: 100%;
     height: 500px;
@@ -426,12 +425,10 @@
     width: 100%;
     height: 56px;
     padding: 0px 24px;
-    background: #fff;
     border-bottom: 5px solid #f4f7fc;
 
     @include responsive(pc) {
       border: 0;
-      border-radius: 12px;
     }
   }
 
