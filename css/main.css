@@ -1202,27 +1202,34 @@ body {
   left: -2px;
   transform: rotate(-180deg);
 }
-.header .menu__depth2 {
+.header .menu-depth2__wrap {
   position: fixed;
   top: 56px;
   left: 0;
-  z-index: 100;
   width: 100%;
   height: 500px;
+  z-index: 100;
   border-top: 5px solid #f4f7fc;
   background: #fff;
 }
-.header .depth2-title__box {
+.header .menu-depth2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1080px;
+}
+.header .menu-depth2__title {
   position: relative;
   display: block;
   width: 100%;
   margin: 0 auto;
 }
-.header .depth2-title__text {
+.header .menu-depth2__title-link {
   font-size: 16px;
   color: #222;
 }
-.header .depth2-title__text::after {
+.header .menu-depth2__title-link::after {
   content: "";
   position: absolute;
   right: -5px;
@@ -1232,20 +1239,20 @@ body {
   height: 22px;
   background: url("/assets/images/arr-60-r-a.png") center no-repeat 100% auto;
 }
-.header .depth2-menu__content {
+.header .menu-depth2__content {
   position: relative;
   display: flex;
   padding-bottom: 60px;
 }
-.header .depth2-menu__lists {
+.header .menu-depth2__list {
   position: relative;
   display: block;
 }
-.header .depth2-menu__list-title {
+.header .menu-depth2__list-title {
   font-size: 16px;
   margin-bottom: 10px;
 }
-.header .depth2-menu__item {
+.header .menu-depth2__item {
   font-size: 14px;
 }
 .header .menu-button {

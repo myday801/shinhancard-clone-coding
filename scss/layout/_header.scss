@@ -286,30 +286,38 @@
     transform: rotate(-180deg);
   }
 
-  .menu__depth2 {
+  .menu-depth2__wrap {
     position: fixed;
     top: 56px;
     left: 0;
-    z-index: 100;
     width: 100%;
     height: 500px;
+    z-index: 100;
     border-top: 5px solid #f4f7fc;
     background: #fff;
   }
 
-  .depth2-title__box {
+  .menu-depth2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+  }
+
+  .menu-depth2__title {
     position: relative;
     display: block;
     width: 100%;
     margin: 0 auto;
   }
 
-  .depth2-title__text {
+  .menu-depth2__title-link {
     font-size: 16px;
     color: #222;
   }
 
-  .depth2-title__text::after {
+  .menu-depth2__title-link::after {
     content: "";
     position: absolute;
     right: -5px;
@@ -320,23 +328,23 @@
     background: url("/assets/images/arr-60-r-a.png") center no-repeat 100% auto;
   }
 
-  .depth2-menu__content {
+  .menu-depth2__content {
     position: relative;
     display: flex;
     padding-bottom: 60px;
   }
 
-  .depth2-menu__lists {
+  .menu-depth2__list {
     position: relative;
     display: block;
   }
 
-  .depth2-menu__list-title {
+  .menu-depth2__list-title {
     font-size: 16px;
     margin-bottom: 10px;
   }
 
-  .depth2-menu__item {
+  .menu-depth2__item {
     font-size: 14px;
   }
 
