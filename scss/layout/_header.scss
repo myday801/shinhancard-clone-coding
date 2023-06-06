@@ -298,6 +298,10 @@
   }
 
   .menu-depth2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -307,7 +311,8 @@
 
   .menu-depth2__title {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
     margin: 0 auto;
   }
@@ -317,21 +322,19 @@
     color: #222;
   }
 
-  .menu-depth2__title-link::after {
-    content: "";
-    position: absolute;
-    right: -5px;
-    top: 50%;
-    transform: translateY(-50%);
+  .menu-depth2__title-icon {
+    // position: absolute;
+    // right: -5px;
+    // top: 50%;
+    // transform: translateY(-50%);
     width: 22px;
     height: 22px;
-    background: url("/assets/images/arr-60-r-a.png") center no-repeat 100% auto;
   }
 
   .menu-depth2__content {
     position: relative;
     display: flex;
-    padding-bottom: 60px;
+    width: 100%;
   }
 
   .menu-depth2__list {
