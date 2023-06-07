@@ -52,7 +52,7 @@
 
   .top__utility-item-link {
     color: $gray;
-    font-size: 14px;
+    font-size: 1.4rem;
     text-align: center;
   }
 
@@ -75,7 +75,7 @@
     border: 0;
     background: transparent;
     font-family: $font-stack;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: $gray;
     cursor: pointer;
   }
@@ -136,7 +136,7 @@
 
   .user-menu__item-link {
     @include responsive(pc) {
-      font-size: 13px;
+      font-size: 1.3rem;
       color: #323b50;
       padding: 0 10px;
     }
@@ -229,7 +229,7 @@
   .navbar-menu__item {
     padding: 0 15px;
     font-family: "OneShinhanMedium";
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #222;
     word-break: keep-all;
@@ -237,12 +237,12 @@
     transform: none;
 
     @include responsive(tablet) {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     @include responsive(pc) {
       padding: 0 15px;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 40px;
     }
   }
@@ -322,7 +322,7 @@
   }
 
   .menu-depth2__title-link {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #222;
   }
@@ -344,12 +344,12 @@
   }
 
   .menu-depth2__list-title {
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-bottom: 10px;
   }
 
   .menu-depth2__item {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   .menu-button {

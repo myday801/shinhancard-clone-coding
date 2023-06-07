@@ -47,7 +47,7 @@
   border: 2px solid #486eff;
   border-radius: 8px;
   box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
-  font-size: 20px;
+  font-size: 2rem;
   color: #999;
   background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px)
     center / 32px 32px;
@@ -126,7 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .quickmenu__item-icon {
@@ -262,7 +262,7 @@
   border-radius: 8px;
 
   @include responsive(pc) {
-    width: 310px;
+    width: 100%;
     height: 170px;
     padding: 0 30px;
     border-radius: 12px;
@@ -330,23 +330,38 @@
   margin-top: 50px;
 }
 
+.recommend-card--tabs {
+  position: relative;
+}
+
 .recommend-card--tabs__list {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100px;
 }
 
+.recommend-card--tabs__item {
+  color: #888;
+  font-size: 2.2rem;
+}
+
 .recommend-card--tabs__link {
+  position: relative;
   padding: 0 20px;
-  font-size: 20px;
+}
+
+.recommend-card--tabs__contents {
+  margin: 20px 0px 0px;
 }
 
 .recommend-card--tabs__content {
   display: none;
 }
 
-.test4 {
+.active {
   display: block;
+  color: #000;
 }
 
 .recommend-card--tabs__contents-list {
