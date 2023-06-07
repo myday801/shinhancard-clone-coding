@@ -80,6 +80,23 @@ $(document).ready(function () {
     $(this).toggle();
     $(".swiper-button-pause").toggle();
   });
+
+  // Recommend card section tabmenu
+  // 초기 설정: 첫 번째 탭 활성화
+  $(".recommend-card--tabs__link").first().addClass("test4");
+  $("recommend-card--tabs__content").hide().first().show();
+
+  // 탭 버튼 클릭 이벤트 처리
+  $(".recommend-card--tabs__link").click(function () {
+    // 선택된 탭 버튼 활성화
+    $(".recommend-card--tabs__link").removeClass("test4");
+    $(this).addClass("test4");
+
+    // 선택된 탭 내용 표시
+    var tabId = $(this).data("tab");
+    $("recommend-card--tabs__content").hide();
+    $("#" + tabId).show();
+  });
 });
 
 // Promotion background-image
