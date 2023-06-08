@@ -6,14 +6,10 @@
 
 .useful-group {
   padding: 20px 0;
-  background: url("/assets/images/main_bg_m.png") center center repeat;
-  background-size: 100% 100%;
   overflow: hidden;
 
   @include responsive(pc) {
     padding: 60px 0 20px 0;
-    background: url("/assets/images/main_bg_pc.png") repeat;
-    background-size: auto 100%;
   }
 }
 
@@ -59,12 +55,6 @@
 .quickmenu__wrap {
   position: relative;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 1px 1px 13px 0px rgba(113, 121, 149, 0.4);
-
-  @include responsive(pc) {
-    border-radius: 12px;
-  }
 }
 
 .quickmenu__swiper {
@@ -327,11 +317,18 @@
 // Recommend card section
 
 .recommend-card-group {
-  margin-top: 50px;
+  padding-top: 47px;
+  padding-bottom: 60px;
+
+  @include responsive(pc) {
+    padding-top: 184px;
+    padding-bottom: 50px;
+  }
 }
 
 .recommend-card--tabs {
   position: relative;
+  margin-top: 45px;
 }
 
 .recommend-card--tabs__list {

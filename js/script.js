@@ -94,6 +94,12 @@ $(document).ready(function () {
       .siblings()
       .removeClass("active");
   });
+
+  // Recommend card section swiper
+  var swiper4 = new Swiper(".js-card-swiper", {
+    slidesPerView: 5,
+    loop: true,
+  });
 });
 
 // Promotion background-image
