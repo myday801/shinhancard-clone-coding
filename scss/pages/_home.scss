@@ -57,8 +57,9 @@
 .recommend-card--tabs__list {
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
-  height: 100px;
+  height: 30px;
 }
 
 .recommend-card--tabs__item {
