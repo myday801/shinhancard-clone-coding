@@ -1459,14 +1459,12 @@ body {
 }
 @media (min-width: 1024px) {
   .recommend-card-group {
-    padding-top: 45px;
-    padding-bottom: 50px;
+    padding: 70px;
   }
 }
 
 .recommend-card--tabs {
   position: relative;
-  margin-top: 45px;
 }
 
 .recommend-card--tabs__list {
@@ -1493,9 +1491,10 @@ body {
 
 .recommend-card--tabs__content {
   display: none;
+  margin-top: 100px;
 }
 
-.active {
+.tab-content-active {
   display: block;
   color: #000;
 }
@@ -1599,23 +1598,33 @@ body {
 
 .promotion-group {
   position: relative;
+  display: block;
+  padding: 60px 0;
+  border-bottom: 12px solid #eee;
 }
 @media (min-width: 1024px) {
   .promotion-group {
     padding: 0 40px;
+    border-bottom: 0;
   }
 }
 
 .promotion-group::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1200px;
-  width: 100%;
-  height: 1px;
-  background: #eee;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .promotion-group::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #eee;
+  }
 }
 
 .promotion__wrap {
@@ -1672,9 +1681,19 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .promotion__desc {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .promotion__desc {
+    font-size: 2rem;
+  }
 }
 
 .swiper-button-play {
@@ -1700,6 +1719,162 @@ body {
 .promotion-swiper__pagination {
   position: static;
   width: auto !important;
+}
+
+.finance-group {
+  position: relative;
+  padding: 60px 0;
+  border-bottom: 12px solid #eee;
+}
+@media (min-width: 1024px) {
+  .finance-group {
+    border-bottom: none;
+  }
+}
+
+.finance-group::after {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .finance-group::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #eee;
+  }
+}
+
+.finance__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.finance__head {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.finance__title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+@media (min-width: 1024px) {
+  .finance__title {
+    font-size: 2.4rem;
+  }
+}
+
+.finance__heade-bottom {
+  padding: 4px 0 22px 0;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+@media (min-width: 1024px) {
+  .finance__heade-bottom {
+    padding: 0;
+    font-size: 1.6rem;
+    border-bottom: 0;
+  }
+}
+
+.finance__subtitle {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.finance__contents__list {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .finance__contents__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.finance__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+@media (min-width: 1024px) {
+  .finance__item {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    margin: 12px 15px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+  }
+}
+
+.finance__item__img {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .finance__item__img {
+    display: block;
+    height: 48px;
+    background: center center no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+.finance__item__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .finance__item__title {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+}
+
+.br-hide {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .br-hide {
+    display: block;
+  }
+}
+
+.finance__button__wrap {
+  padding: 0;
+}
+@media (min-width: 1024px) {
+  .finance__button__wrap {
+    padding: 15px 0px 6px;
+  }
+}
+
+.finance__item__button {
+  width: 90px;
+  height: 38px;
+  padding: 0px 10px;
+  margin: 0px 5px;
+  line-height: 38px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #476eff;
+  border-radius: 4px;
 }
 
 .useful-group {

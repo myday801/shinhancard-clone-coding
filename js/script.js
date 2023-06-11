@@ -84,15 +84,36 @@ $(document).ready(function () {
   // Recommend card section tabmenu
   $(".recommend-card--tabs__item").click(function () {
     // 선택된 탭에 대한 처리
-    $(this).addClass("active").siblings().removeClass("active");
+    $(this)
+      .addClass("tab-content-active")
+      .siblings()
+      .removeClass("tab-content-active");
 
     // 선택된 탭에 대응하는 패널 표시
     var tabIndex = $(this).index();
     $(".recommend-card--tabs__content")
       .eq(tabIndex)
-      .addClass("active")
+      .addClass("tab-content-active")
       .siblings()
-      .removeClass("active");
+      .removeClass("tab-content-active");
+  });
+
+  // Finance section button
+  // 단기대출
+  $("#financeShortLoan").click(function () {
+    $(location).attr("href", "#");
+  });
+  // 장기대출
+  $("#financeLongLoan").click(function () {
+    $(location).attr("href", "#");
+  });
+  // 리볼빙
+  $("#financeRevolving").click(function () {
+    $(location).attr("href", "#");
+  });
+  // 즉시대출
+  $("#financeLoan").click(function () {
+    $(location).attr("href", "#");
   });
 
   // Recommend card section swiper
@@ -122,4 +143,15 @@ for (let i = 0; i < promotionImg.length; i++) {
   promotionImg[
     i
   ].style.backgroundImage = `url(./assets/images/promotion/${promotionImgList[i]}.png)`;
+}
+
+// Finance background-image
+let financeIconList = ["short_loan", "long_loan", "revolving", "loan"];
+
+let financeIcon = document.querySelectorAll(".finance__item__img");
+
+for (let i = 0; i < financeIcon.length; i++) {
+  financeIcon[
+    i
+  ].style.backgroundImage = `url(./assets/images/icon/${financeIconList[i]}.png)`;
 }

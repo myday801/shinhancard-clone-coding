@@ -240,15 +240,17 @@
       <main class="main">
         <!-- Main search bar -->
         <div class="main-search">
-          <div class="main-search__box">
-            <form class="main-search__form searchbox">
-              <input
-                class="main-search__input"
-                type="search"
-                maxlength="200"
-                placeholder="'신한플레이'를 검색해보세요"
-              />
-            </form>
+          <div class="container">
+            <div class="main-search__box">
+              <form class="main-search__form searchbox">
+                <input
+                  class="main-search__input"
+                  type="search"
+                  maxlength="200"
+                  placeholder="'신한플레이'를 검색해보세요"
+                />
+              </form>
+            </div>
           </div>
         </div>
         <!-- Recommend card section -->
@@ -257,7 +259,7 @@
             <div id="cardsTabs" class="recommend-card--tabs__wrap">
               <div class="recommend-card--tabs">
                 <ul class="recommend-card--tabs__list">
-                  <li class="recommend-card--tabs__item">
+                  <li class="recommend-card--tabs__item tab-content-active">
                     <a href="#tabs1" class="recommend-card--tabs__link"
                       >인기카드</a
                     >
@@ -278,7 +280,7 @@
                 <!-- 인기카드 -->
                 <div
                   data-tab="tab1"
-                  class="recommend-card--tabs__content active swiper js-card-swiper"
+                  class="recommend-card--tabs__content tab-content-active swiper js-card-swiper"
                 >
                   <ul
                     class="recommend-card--tabs__contents-list swiper-wrapper"
@@ -591,6 +593,81 @@
                 <div
                   class="swiper-pagination promotion-swiper__pagination"
                 ></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Finance section -->
+        <section class="finance-group">
+          <div class="container">
+            <div class="finance__wrap">
+              <div class="finance__head">
+                <h2 class="finance__title">금융</h2>
+              </div>
+              <div class="finance__head-bottom">
+                <span class="finance__subtitle">똑똑한 금융생활</span>
+                <a href="#" class="finance__subtitle__link">
+                  <span class="finance__subtitle-more"
+                    >나만의 금융혜택 보기</span
+                  >
+                </a>
+              </div>
+              <div class="finance__contents">
+                <ul class="finance__contents__list">
+                  <li class="finance__item">
+                    <div class="finance__item__img"></div>
+                    <div class="finance__item__title">
+                      단기카드대출<br class="br-hide" />(현금서비스)
+                    </div>
+                    <div class="finance__button__wrap">
+                      <button
+                        id="financeShortLoan"
+                        class="finance__item__button"
+                      >
+                        신청하기
+                      </button>
+                    </div>
+                  </li>
+                  <li class="finance__item">
+                    <div class="finance__item__img"></div>
+                    <div class="finance__item__title">
+                      장기카드대출<br class="br-hide" />(카드론)
+                    </div>
+                    <div class="finance__button__wrap">
+                      <button
+                        id="financeLongLoan"
+                        class="finance__item__button"
+                      >
+                        신청하기
+                      </button>
+                    </div>
+                  </li>
+                  <li class="finance__item">
+                    <div class="finance__item__img"></div>
+                    <div class="finance__item__title">
+                      일부결제금액 이월약정<br class="br-hide" />(리볼빙)
+                    </div>
+                    <div class="finance__button__wrap">
+                      <button
+                        id="financeRevolving"
+                        class="finance__item__button"
+                      >
+                        신청하기
+                      </button>
+                    </div>
+                  </li>
+                  <li class="finance__item">
+                    <div class="finance__item__img"></div>
+                    <div class="finance__item__title">
+                      맞춤대출<br class="br-hide" />(즉시대출)
+                    </div>
+                    <div class="finance__button__wrap">
+                      <button id="financeLoan" class="finance__item__button">
+                        신청하기
+                      </button>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
