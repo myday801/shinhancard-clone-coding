@@ -5,14 +5,14 @@ $(document).ready(function () {
   });
 
   // Gnb dropdown menu
-  // $(".navbar-menu__item").hover(
-  //   function () {
-  //     $(this).find(".menu__depth2").stop().slideDown(200);
-  //   },
-  //   function () {
-  //     $(this).find(".menu__depth2").stop().slideUp(200);
-  //   }
-  // );
+  $(".navbar-menu__item").hover(
+    function () {
+      $(this).find(".menu-depth2__wrap").stop().slideDown(200);
+    },
+    function () {
+      $(this).find(".menu-depth2__wrap").stop().slideUp(200);
+    }
+  );
 
   // Gnb swiper
   var swiper1 = new Swiper(".swiper1", {
