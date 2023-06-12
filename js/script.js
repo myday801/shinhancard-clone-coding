@@ -8,11 +8,11 @@ $(document).ready(function () {
   $(".navbar-menu__item").hover(
     function () {
       $(this).find(".menu-depth2__wrap").stop().slideDown(200);
-      $(this).find(".menu-depth2__wrap").toggleClass("active");
+      $(".gnb__dimmer").toggle();
     },
     function () {
       $(this).find(".menu-depth2__wrap").stop().slideUp(200);
-      $(this).find(".menu-depth2__wrap").toggleClass("active");
+      $(".gnb__dimmer").toggle();
     }
   );
 
