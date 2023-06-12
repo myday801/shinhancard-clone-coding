@@ -347,14 +347,16 @@
   }
 }
 
-.finance__heade-bottom {
+.finance__head-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 4px 0 22px 0;
-  font-size: 1.4rem;
-  border-bottom: 1px solid #eee;
 
   @include responsive(pc) {
+    justify-content: start;
     padding: 0;
-    font-size: 1.6rem;
     border-bottom: 0;
   }
 }
@@ -362,6 +364,34 @@
 .finance__subtitle {
   font-size: 1.4rem;
   color: #666;
+
+  @include responsive(pc) {
+    font-size: 1.6rem;
+  }
+}
+
+.finance__subtitle__link {
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  @include responsive(pc) {
+    margin-left: 10px;
+    font-size: 1.6rem;
+  }
+}
+
+.finance__subtitle-more {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.finance__subtitle-more-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.finance__contents {
+  padding-top: 16px;
 }
 
 .finance__contents__list {
@@ -449,11 +479,31 @@
 // Useful group section
 
 .useful-group {
+  position: relative;
   padding: 20px 0;
   overflow: hidden;
+  padding: 60px 0;
+  border-bottom: 12px solid #eee;
 
   @include responsive(pc) {
-    padding: 60px 0 20px 0;
+    border-bottom: 0;
+  }
+}
+
+.useful-group::after {
+  display: none;
+
+  @include responsive(pc) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #eee;
   }
 }
 
@@ -549,4 +599,83 @@
     height: 40px;
     font-size: 1.6rem;
   }
+}
+
+// Notice section
+.notice-group {
+  position: relative;
+  display: block;
+  padding: 60px 0;
+  border-bottom: 12px solid #eee;
+
+  @include responsive(pc) {
+    border-bottom: 0;
+  }
+}
+
+.notice-group::after {
+  display: none;
+
+  @include responsive(pc) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #eee;
+  }
+}
+
+.notice__row {
+  display: flex;
+  justify-content: center;
+}
+
+.notice__wrap {
+  position: relative;
+  width: 50%;
+  margin: 0 40px;
+}
+
+.notice__title__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.notice__title {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.notice__title-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.notice__contents {
+  margin-top: 14px;
+}
+
+.notice__content__item {
+  height: 46px;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notice-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #eee;
 }
