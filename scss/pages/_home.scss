@@ -88,6 +88,14 @@
   display: flex;
 }
 
+.recommend-card--tabs__contents-link {
+  width: 278px;
+  height: 175px;
+  background: center center no-repeat;
+  background-size: 100% auto;
+  transform: rotate(90deg);
+}
+
 .recommend-card--tabs__contents-img {
   width: 133px;
   height: 84px;

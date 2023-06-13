@@ -84,21 +84,7 @@ $(document).ready(function () {
   });
 
   // Recommend card section tabmenu
-  $(".recommend-card--tabs__item").click(function () {
-    // 선택된 탭에 대한 처리
-    $(this)
-      .addClass("tab-content-active")
-      .siblings()
-      .removeClass("tab-content-active");
-
-    // 선택된 탭에 대응하는 패널 표시
-    var tabIndex = $(this).index();
-    $(".recommend-card--tabs__content")
-      .eq(tabIndex)
-      .addClass("tab-content-active")
-      .siblings()
-      .removeClass("tab-content-active");
-  });
+  $("#cardsTabs").tabs();
 
   // Finance section button
   // 단기대출
@@ -119,10 +105,10 @@ $(document).ready(function () {
   });
 
   // Recommend card section swiper
-  var swiper4 = new Swiper(".js-card-swiper", {
-    slidesPerView: 5,
-    loop: true,
-  });
+  // var swiper4 = new Swiper(".js-card-swiper", {
+  //   slidesPerView: 5,
+  //   loop: true,
+  // });
 });
 
 // Promotion background-image
