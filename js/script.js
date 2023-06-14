@@ -84,7 +84,36 @@ $(document).ready(function () {
   });
 
   // Recommend card section tabmenu
-  $("#cardsTabs").tabs();
+  $(".recommend-tabs__link").click(function () {
+    var tabId = $(this).attr("href");
+    $(".recommend-tab__content").hide();
+    $(tabId).show();
+    $(".recommend-tabs__link").removeClass("tab-content-active");
+    $(this).addClass("tab-content-active");
+  });
+
+  var imgArray = [
+    "deepDreamPlatinumPlus.png",
+    "deepOil.png",
+    "mrLife.png",
+    "prime.png",
+    "spring.png",
+    "kuromi.png",
+    "creditFitChoigosim.png",
+    "creditAir1.5.png",
+    "subscribeLike.png",
+    "bonvoy.png",
+    "bonvoyTheClassic.png",
+    "theAceBlueLabel.png",
+    "bestPlus.png",
+    "theClassicPlus.png",
+    // 나머지 이미지 파일 경로
+  ];
+
+  $(".recommend-tab__content__img").each(function (index) {
+    var imgPath = "./assets/images/card/" + imgArray[index];
+    $(this).css("background-image", "url(" + imgPath + ")");
+  });
 
   // Finance section button
   // 단기대출

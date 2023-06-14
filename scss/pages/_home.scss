@@ -48,11 +48,11 @@
   }
 }
 
-.recommend-card--tabs {
+.recommend-tabs__wrap {
   position: relative;
 }
 
-.recommend-card--tabs__list {
+.recommend-tabs__list {
   position: relative;
   display: flex;
   align-items: center;
@@ -60,21 +60,21 @@
   height: 30px;
 }
 
-.recommend-card--tabs__item {
+.recommend-tabs__item {
   color: #888;
   font-size: 2.2rem;
 }
 
-.recommend-card--tabs__link {
+.recommend-tabs__link {
   position: relative;
   padding: 0 20px;
 }
 
-.recommend-card--tabs__contents {
-  margin: 20px 0px 0px;
+.recommend-tab__content__wrap {
+  margin-top: 20px;
 }
 
-.recommend-card--tabs__content {
+.recommend-tab__content {
   display: none;
   margin-top: 100px;
 }
@@ -84,21 +84,15 @@
   color: #000;
 }
 
-.recommend-card--tabs__contents-list {
+.recommend-tab__content__list {
   display: flex;
 }
 
-.recommend-card--tabs__contents-link {
-  width: 278px;
-  height: 175px;
-  background: center center no-repeat;
-  background-size: 100% auto;
-  transform: rotate(90deg);
-}
-
-.recommend-card--tabs__contents-img {
+.recommend-tab__content__img {
   width: 133px;
   height: 84px;
+  background: center center no-repeat;
+  background-size: 100% auto;
   transform: rotate(90deg);
 
   @include responsive(tablet) {
@@ -109,6 +103,15 @@
   @include responsive(pc) {
     width: 278px;
     height: 175px;
+  }
+}
+
+.recommend-tab__content__title {
+  font-size: 1.3rem;
+  line-height: 1.35;
+
+  @include responsive(pc) {
+    font-size: 1.6rem;
   }
 }
 
