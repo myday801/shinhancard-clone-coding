@@ -40,7 +40,7 @@
 // Recommend card section
 
 .recommend-card-group {
-  padding-top: 47px;
+  padding-top: 48px;
   padding-bottom: 60px;
 
   @include responsive(pc) {
@@ -316,10 +316,11 @@
   }
 }
 
-.swiper-button-play {
+.swiper-button-play,
+.swiper-button-pause {
   width: 20px;
   height: 18px;
-  margin-right: 20px;
+  margin-right: 10px;
   background: #f1f1f3 url("../../assets/images/ico-48-control1-a.png") center
     center no-repeat;
   background-size: 16px auto;
@@ -330,7 +331,7 @@
 .swiper-button-pause {
   width: 20px;
   height: 18px;
-  margin-right: 20px;
+  margin-right: 10px;
   background: #f1f1f3 url("../../assets/images/ico-48-control1-b.png") center
     center no-repeat;
   background-size: 16px auto;
@@ -677,19 +678,52 @@
 
 .notice__row {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include responsive(pc) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .notice__wrap {
   position: relative;
-  width: 50%;
-  margin: 0 40px;
+  width: 100%;
+  height: auto;
+
+  @include responsive(pc) {
+    display: block;
+    width: 50%;
+    padding: 0 40px;
+  }
+}
+
+.notice-left {
+  display: block;
+
+  @include responsive(pc) {
+    padding-left: 0;
+  }
 }
 
 .notice__title__link {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.notice__content__new {
+  height: 20px;
+  padding: 0px 6px;
+  margin: 0px 2px;
+  font-size: 1.1rem;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  color: #fc180f;
+  background: #ffdde2;
 }
 
 .notice__title {
@@ -703,7 +737,7 @@
 }
 
 .notice__contents {
-  margin-top: 14px;
+  margin-top: 30px;
 }
 
 .notice__content__item {
@@ -715,12 +749,16 @@
 }
 
 .notice-left::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: #eee;
+  display: none;
+
+  @include responsive(pc) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #eee;
+  }
 }
