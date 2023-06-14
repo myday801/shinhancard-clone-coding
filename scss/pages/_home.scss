@@ -86,6 +86,32 @@
 
 .recommend-tab__content__list {
   display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.recommend-tab__content__item {
+  margin-right: 30px;
+}
+
+.recommend-tab__content__list:nth-child(5) {
+  margin-right: 0;
+}
+
+.recommend-tab__content__link {
+  display: block;
+  width: 84px;
+  height: 133px;
+
+  @include responsive(tablet) {
+    width: 160px;
+    height: 255px;
+  }
+
+  @include responsive(pc) {
+    width: 175px;
+    height: 278px;
+  }
 }
 
 .recommend-tab__content__img {

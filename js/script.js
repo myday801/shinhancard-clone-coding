@@ -97,6 +97,7 @@ $(document).ready(function () {
     "deepOil.png",
     "mrLife.png",
     "prime.png",
+    "wayCheckChoigosim.png",
     "spring.png",
     "kuromi.png",
     "creditFitChoigosim.png",
@@ -107,7 +108,6 @@ $(document).ready(function () {
     "theAceBlueLabel.png",
     "bestPlus.png",
     "theClassicPlus.png",
-    // 나머지 이미지 파일 경로
   ];
 
   $(".recommend-tab__content__img").each(function (index) {

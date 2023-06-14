@@ -1206,18 +1206,20 @@ body {
   left: -2px;
   transform: rotate(-180deg);
 }
-.header .menu-depth2__wrap {
-  position: fixed;
-  top: 130px;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: calc(100vh - 310px);
-  z-index: 100;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
-  border-top: 5px solid #f4f7fc;
-  background: #fff;
-  overflow: auto;
+@media (min-width: 1024px) {
+  .header .menu-depth2__wrap {
+    position: fixed;
+    top: 130px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: calc(100vh - 310px);
+    z-index: 100;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    border-top: 5px solid #f4f7fc;
+    background: #fff;
+    overflow: auto;
+  }
 }
 .header .gnb__dimmer {
   content: "";
@@ -1524,6 +1526,34 @@ body {
 
 .recommend-tab__content__list {
   display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.recommend-tab__content__item {
+  margin-right: 30px;
+}
+
+.recommend-tab__content__list:nth-child(5) {
+  margin-right: 0;
+}
+
+.recommend-tab__content__link {
+  display: block;
+  width: 84px;
+  height: 133px;
+}
+@media (min-width: 768px) {
+  .recommend-tab__content__link {
+    width: 160px;
+    height: 255px;
+  }
+}
+@media (min-width: 1024px) {
+  .recommend-tab__content__link {
+    width: 175px;
+    height: 278px;
+  }
 }
 
 .recommend-tab__content__img {

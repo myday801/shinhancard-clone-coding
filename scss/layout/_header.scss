@@ -291,17 +291,19 @@
   }
 
   .menu-depth2__wrap {
-    position: fixed;
-    top: 130px;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: calc(100vh - 310px);
-    z-index: 100;
-    font-family: $font-stack;
-    border-top: 5px solid #f4f7fc;
-    background: #fff;
-    overflow: auto;
+    @include responsive(pc) {
+      position: fixed;
+      top: 130px;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: calc(100vh - 310px);
+      z-index: 100;
+      font-family: $font-stack;
+      border-top: 5px solid #f4f7fc;
+      background: #fff;
+      overflow: auto;
+    }
   }
 
   .gnb__dimmer {
