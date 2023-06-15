@@ -253,7 +253,10 @@
   .navbar-menu__item-link {
     color: inherit;
     white-space: nowrap;
-    line-height: 70px;
+
+    @include responsive(pc) {
+      line-height: 70px;
+    }
   }
 
   .navbar-menu__item-link:visited {
@@ -291,6 +294,8 @@
   }
 
   .menu-depth2__wrap {
+    display: none;
+
     @include responsive(pc) {
       position: fixed;
       top: 130px;
@@ -307,30 +312,38 @@
   }
 
   .gnb__dimmer {
-    content: "";
-    position: fixed;
-    top: 130px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
     display: none;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: -1;
+
+    @include responsive(pc) {
+      content: "";
+      position: fixed;
+      top: 130px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: -1;
+    }
   }
 
   .menu-depth2 {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1080px;
-    width: 100%;
-    padding: 22px 0;
+    display: none;
+
+    @include responsive(pc) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1080px;
+      width: 100%;
+      padding: 22px 0;
+    }
   }
 
   .menu-depth2__title {

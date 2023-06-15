@@ -1171,7 +1171,11 @@ body {
 .header .navbar-menu__item-link {
   color: inherit;
   white-space: nowrap;
-  line-height: 70px;
+}
+@media (min-width: 1024px) {
+  .header .navbar-menu__item-link {
+    line-height: 70px;
+  }
 }
 .header .navbar-menu__item-link:visited {
   color: #222;
@@ -1206,6 +1210,9 @@ body {
   left: -2px;
   transform: rotate(-180deg);
 }
+.header .menu-depth2__wrap {
+  display: none;
+}
 @media (min-width: 1024px) {
   .header .menu-depth2__wrap {
     position: fixed;
@@ -1222,29 +1229,39 @@ body {
   }
 }
 .header .gnb__dimmer {
-  content: "";
-  position: fixed;
-  top: 130px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   display: none;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: -1;
+}
+@media (min-width: 1024px) {
+  .header .gnb__dimmer {
+    content: "";
+    position: fixed;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
 }
 .header .menu-depth2 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  width: 100%;
-  padding: 22px 0;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header .menu-depth2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1080px;
+    width: 100%;
+    padding: 22px 0;
+  }
 }
 .header .menu-depth2__title {
   position: relative;
@@ -2134,7 +2151,6 @@ body {
     bottom: 0;
     left: 50%;
     display: block;
-    max-width: 1200px;
     width: 100%;
     height: 1px;
     transform: translateX(-50%);
@@ -2143,6 +2159,7 @@ body {
 }
 
 .notice__row {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2170,10 +2187,21 @@ body {
 
 .notice-left {
   display: block;
+  border-bottom: 1px solid #eee;
 }
 @media (min-width: 1024px) {
   .notice-left {
     padding-left: 0;
+    border-bottom: 0;
+  }
+}
+
+.notice-right {
+  margin-top: 24px;
+}
+@media (min-width: 1024px) {
+  .notice-right {
+    margin: 0;
   }
 }
 
