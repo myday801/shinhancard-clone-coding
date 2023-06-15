@@ -172,3 +172,14 @@ for (let i = 0; i < financeIcon.length; i++) {
     i
   ].style.backgroundImage = `url(./assets/images/icon/${financeIconList[i]}.png)`;
 }
+
+// footer sns-icon background-image
+let snsIconList = ["sns07", "sns02", "sns05", "sns03", "sns04"];
+
+let snsIcon = document.querySelectorAll(".footer-bottom__link");
+
+for (let i = 0; i < snsIcon.length; i++) {
+  snsIcon[
+    i
+  ].style.backgroundImage = `url(./assets/images/sns/${snsIconList[i]}.png)`;
+}
