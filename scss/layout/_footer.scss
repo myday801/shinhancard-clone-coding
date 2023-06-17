@@ -14,11 +14,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.1rem;
-
-  @include responsive(pc) {
-    font-size: 1.3rerm;
-  }
 }
 
 .footer__wrap::after {
@@ -48,8 +43,10 @@
 .footer-top__item {
   padding: 4px 0px;
   margin-left: 40px;
+  font-size: 1.1rem;
 
   @include responsive(pc) {
+    font-size: 1.3rem;
     font-weight: bold;
   }
 }
@@ -69,18 +66,50 @@
 
 // footer middle
 
+.footer-middle {
+  margin-top: 14px;
+}
+
 .footer-middle__list {
   display: flex;
   align-items: center;
   width: 100%;
+  font-size: 1.1rem;
+
+  @include responsive(pc) {
+    font-size: 1.3rem;
+  }
+}
+
+.footer-middle__item {
+  padding: 4px 9px 4px 12px;
+}
+
+.footer-middle__item:first-child {
+  padding-left: 0;
 }
 
 // footer bottom
+
+.footer-bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
 
 .footer-bottom__list {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.footer-bottom__item {
+  margin-left: 20px;
+}
+
+.footer-bottom__item:first-child {
+  margin-left: 0;
 }
 
 .footer-bottom__link {
@@ -92,4 +121,79 @@
   color: transparent;
   background: center center no-repeat;
   background-size: 100% auto;
+}
+
+// footer select group
+
+.footer-bottom__group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom__button__wrap {
+  position: relative;
+  width: 160px;
+  height: 34px;
+}
+
+.footer-bottom__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px 12px;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+
+.footer-bottom__button-arrow {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  transform: rotate(135deg);
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer-bottom__button.toggle-active {
+  opacity: 0.5;
+}
+
+.footer-bottom__button-arrow.toggle-active {
+  top: 14px;
+  transform: rotate(-45deg);
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
+  opacity: 0.5;
+}
+
+.footer-bottom__button-right {
+  margin-left: 18px;
+}
+
+.footer-bottom__group__list {
+  position: absolute;
+  bottom: 35px;
+  display: none;
+  width: 100%;
+  padding: 3px 12px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  box-shadow: 2px 6px 28px 0px rgba(0, 0, 0, 0.03);
+  font-size: 1.3rem;
+}
+
+.footer-bottom__group__item {
+  padding: 4px 0px;
+  line-height: 18px;
+  font-weight: bold;
 }

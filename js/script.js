@@ -133,11 +133,24 @@ $(document).ready(function () {
     $(location).attr("href", "#");
   });
 
-  // Recommend card section swiper
-  // var swiper4 = new Swiper(".js-card-swiper", {
-  //   slidesPerView: 5,
-  //   loop: true,
-  // });
+  //Recommend card section swiper
+  var swiper4 = new Swiper(".js-card-swiper", {
+    slidesPerView: 5,
+    loop: true,
+  });
+
+  // footer bottom selec button toggle arrow
+  $("#toggleBtn").on("click", function () {
+    $(this).find(".footer-bottom__button-arrow").toggleClass("toggle-active");
+    $(this).toggleClass("toggle-active");
+    $(this).siblings(".footer-bottom__group__list").toggle();
+  });
+
+  $("#toggleBtn2").on("click", function () {
+    $(this).find(".footer-bottom__button-arrow").toggleClass("toggle-active");
+    $(this).toggleClass("toggle-active");
+    $(this).siblings(".footer-bottom__group__list").toggle();
+  });
 });
 
 // Promotion background-image
