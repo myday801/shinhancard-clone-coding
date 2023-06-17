@@ -45,6 +45,13 @@ $(document).ready(function () {
     $("#allMenuWrap").toggle();
   });
 
+  $(".all-menu__nav-link:first").addClass("active");
+
+  $(".all-menu__nav-link").click(function () {
+    $(".all-menu__nav-link").removeClass("active");
+    $(this).addClass("active");
+  });
+
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
     slidesPerView: 1,

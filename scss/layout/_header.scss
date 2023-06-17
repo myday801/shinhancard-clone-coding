@@ -563,10 +563,69 @@
     border-radius: 40px;
   }
 
-  .all-menu__active {
+  .all-menu__nav-link.active {
     color: #fff;
     font-weight: 600;
     background: #383b5a;
+  }
+
+  // 전체메뉴 content
+  .all-menu__contents-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0px 30px;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .all-menu__title__link {
+    position: relative;
+    padding-right: 18px;
+  }
+
+  .all-menu__title-arrow {
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    background: url("../../assets/images/arr-60-r-a.png") center center
+      no-repeat;
+    background-size: 100% auto;
+  }
+
+  // 전체메뉴 content
+  .all-menu__content__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+  }
+
+  .all-menu__content {
+    display: block;
+    width: 25%;
+    padding: 0px 20px;
+    margin-bottom: 30px;
+  }
+
+  .all-menu__list-title {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .all-menu__content__item {
+    white-space: nowrap;
+  }
+
+  .all-menu__content__link {
+    line-height: 22px;
+    font-size: 1.4rem;
+    color: #666;
   }
 
   .hide {
