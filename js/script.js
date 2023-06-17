@@ -151,6 +151,10 @@ $(document).ready(function () {
     $(this).toggleClass("toggle-active");
     $(this).siblings(".footer-bottom__group__list").toggle();
   });
+
+  $(".footer-expand__button").on("click", function () {
+    $(this).toggleClass("active");
+  });
 });
 
 // Promotion background-image
