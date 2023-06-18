@@ -91,13 +91,17 @@ $(document).ready(function () {
   });
 
   // Recommend card section tabmenu
-  $(".recommend-tabs__link").click(function () {
+  $(".recommend-tabs__link").click(function (e) {
+    e.preventDefault();
     var tabId = $(this).attr("href");
     $(".recommend-tab__content").hide();
     $(tabId).show();
-    $(".recommend-tabs__link").removeClass("tab-content-active");
-    $(this).addClass("tab-content-active");
+    $(".recommend__tabs__item--active").removeClass(
+      "recommend__tabs__item--active"
+    );
+    $(this).parent().addClass("recommend__tabs__item--active");
   });
+  $(".recommend-tabs__item").first().addClass("recommend__tabs__item--active");
 
   var imgArray = [
     "deepDreamPlatinumPlus.png",

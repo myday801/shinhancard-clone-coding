@@ -67,6 +67,7 @@
 
 .recommend-tabs__link {
   position: relative;
+  display: block;
   padding: 0 20px;
 }
 
@@ -79,8 +80,7 @@
   margin-top: 100px;
 }
 
-.tab-content-active {
-  display: block;
+.recommend__tabs__item--active {
   color: #000;
 }
 

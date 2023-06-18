@@ -50,6 +50,10 @@
     cursor: pointer;
   }
 
+  .header-top__utility-item:first-child {
+    padding-left: 0;
+  }
+
   .top__utility-item-link {
     color: $gray;
     font-size: 1.4rem;

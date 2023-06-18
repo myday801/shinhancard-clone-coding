@@ -984,6 +984,9 @@ a {
   padding: 8px 13px 8px 12px;
   cursor: pointer;
 }
+.header .header-top__utility-item:first-child {
+  padding-left: 0;
+}
 .header .top__utility-item-link {
   color: #494f60;
   font-size: 1.4rem;
@@ -1725,7 +1728,6 @@ a {
 }
 
 .footer-expand__button.active {
-  top: 10px;
   transform: rotate(-45deg);
 }
 
@@ -1795,6 +1797,7 @@ a {
 
 .recommend-tabs__link {
   position: relative;
+  display: block;
   padding: 0 20px;
 }
 
@@ -1807,8 +1810,7 @@ a {
   margin-top: 100px;
 }
 
-.tab-content-active {
-  display: block;
+.recommend__tabs__item--active {
   color: #000;
 }
 
