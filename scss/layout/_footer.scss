@@ -6,12 +6,12 @@
 
 .footer__row {
   position: relative;
-  min-width: 1280px;
-  padding: 22px 24px 0px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 24px;
 
   @include responsive(pc) {
-    padding: 25px 40px 11px;
+    padding: 0;
   }
 }
 
@@ -44,7 +44,6 @@
     width: auto;
     margin-left: 40px;
     font-size: 1.3rem;
-    font-weight: bold;
   }
 }
 
@@ -70,8 +69,8 @@
   overflow: hidden;
 
   @include responsive(pc) {
-    border-top: 0;
     padding-top: 0;
+    border-top: 0;
   }
 }
 
@@ -80,6 +79,7 @@
   align-items: center;
   width: 100%;
   font-size: 1.1rem;
+  line-height: 1.53;
 
   @include responsive(pc) {
     font-size: 1.3rem;
@@ -111,14 +111,26 @@
 .footer-bottom {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+
+  @include responsive(pc) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+  }
 }
 
 .footer-bottom__list {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
+
+  @include responsive(pc) {
+    justify-content: flex-start;
+  }
 }
 
 .footer-bottom__item {
@@ -143,9 +155,13 @@
 // footer select group
 
 .footer-bottom__group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: none;
+
+  @include responsive(pc) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .footer-bottom__button__wrap {
@@ -215,9 +231,14 @@
   font-weight: bold;
 }
 
+.footer-expand__button-wrap {
+  padding: 10px;
+  text-align: center;
+  margin-top: 7px;
+}
+
 .footer-expand__button {
   position: relative;
-  display: block;
   width: 12px;
   height: 12px;
   margin: 0 auto;
@@ -225,8 +246,53 @@
   border-right: 2px solid #000;
   transform: rotate(135deg);
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .footer-expand__button.active {
   transform: rotate(-45deg);
+}
+
+// Footer expand
+
+.footer-expand {
+  padding: 18px 24px;
+  text-align: center;
+  background: #fff;
+}
+
+.footer__text {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+
+  @include responsive(pc) {
+    font-size: 1.2rem;
+  }
+}
+
+.footer__text-address {
+  display: block;
+}
+
+.footer__text-registration-number {
+  margin-left: 15px;
+}
+
+.footer-expand__copyright {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  color: #666;
+
+  @include responsive(pc) {
+    font-size: 1.2rem;
+  }
+}
+
+.footer-expand__copyright-br {
+  @include responsive(pc) {
+    display: none;
+  }
 }
