@@ -81,6 +81,7 @@
 }
 
 .recommend__tabs__item--active {
+  display: block;
   color: #000;
 }
 
@@ -130,8 +131,8 @@
   }
 
   @include responsive(pc) {
-    width: 278px;
-    height: 175px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -654,7 +655,7 @@
   position: relative;
   display: block;
   padding: 60px 0;
-  border-bottom: 12px solid #eee;
+  border-bottom: 1px solid #eee;
 
   @include responsive(pc) {
     border-bottom: 0;
@@ -727,9 +728,10 @@
 }
 
 .notice__content__new {
+  display: inline-block;
   height: 20px;
   padding: 0px 6px;
-  margin: 0px 2px;
+  margin-left: 4px;
   font-size: 1.1rem;
   line-height: 20px;
   text-align: center;
@@ -749,12 +751,23 @@
 }
 
 .notice__contents {
-  margin-top: 30px;
+  margin-top: 14px;
+  padding: 14px 0px;
+
+  @include responsive(pc) {
+    margin-top: 30px;
+    padding: 0;
+  }
 }
 
 .notice__content__item {
+  display: flex;
+  align-items: center;
   height: 46px;
   font-size: 1.6rem;
+}
+
+.notice__content__link {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

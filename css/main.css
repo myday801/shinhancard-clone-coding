@@ -1521,13 +1521,14 @@ a {
 .footer {
   position: relative;
   display: block;
-  padding: 60px 0;
-  border-bottom: 12px solid #eee;
+  padding: 25px 0;
 }
-@media (min-width: 1024px) {
-  .footer {
-    border-bottom: 0;
-  }
+
+.footer__row {
+  position: relative;
+  min-width: 1280px;
+  padding: 22px 24px 0px;
+  margin: 0 auto;
 }
 
 .footer__wrap {
@@ -1537,36 +1538,20 @@ a {
   justify-content: center;
 }
 
-.footer__wrap::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  display: block;
-  width: 100%;
-  height: 1px;
-  transform: translateX(-50%);
-  background: #eee;
-}
-@media (min-width: 1024px) {
-  .footer__wrap::after {
-    display: none;
-  }
-}
-
 .footer-top__list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .footer-top__item {
+  width: 50%;
   padding: 4px 0px;
-  margin-left: 40px;
   font-size: 1.1rem;
 }
 @media (min-width: 1024px) {
   .footer-top__item {
+    margin-left: 40px;
     font-size: 1.3rem;
     font-weight: bold;
   }
@@ -1811,6 +1796,7 @@ a {
 }
 
 .recommend__tabs__item--active {
+  display: block;
   color: #000;
 }
 
@@ -1864,8 +1850,8 @@ a {
 }
 @media (min-width: 1024px) {
   .recommend-tab__content__img {
-    width: 278px;
-    height: 175px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -2408,7 +2394,7 @@ a {
   position: relative;
   display: block;
   padding: 60px 0;
-  border-bottom: 12px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 @media (min-width: 1024px) {
   .notice-group {
@@ -2487,9 +2473,10 @@ a {
 }
 
 .notice__content__new {
+  display: inline-block;
   height: 20px;
   padding: 0px 6px;
-  margin: 0px 2px;
+  margin-left: 4px;
   font-size: 1.1rem;
   line-height: 20px;
   text-align: center;
@@ -2509,12 +2496,24 @@ a {
 }
 
 .notice__contents {
-  margin-top: 30px;
+  margin-top: 14px;
+  padding: 14px 0px;
+}
+@media (min-width: 1024px) {
+  .notice__contents {
+    margin-top: 30px;
+    padding: 0;
+  }
 }
 
 .notice__content__item {
+  display: flex;
+  align-items: center;
   height: 46px;
   font-size: 1.6rem;
+}
+
+.notice__content__link {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
