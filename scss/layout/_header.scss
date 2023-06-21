@@ -467,9 +467,10 @@
 
     @include responsive(pc) {
       max-width: 1200px;
-      width: 1200px;
+      width: 100%;
       height: 768px;
       max-height: 80%;
+      padding: 0px 24px;
       border-radius: 12px;
     }
   }
@@ -550,21 +551,21 @@
   .all-menu__nav-item {
     width: auto;
     margin-left: 6px;
-  }
 
-  .all-menu__nav-item:first-child {
-    margin-left: 0;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   .all-menu__nav-link {
     display: block;
-    height: 36px;
+    height: 40px;
     padding: 0px 16px;
-    font-size: 1.4rem;
-    line-height: 2.6;
+    font-size: 1.6rem;
+    line-height: 2.4;
     color: #666;
-    background: #f8f8f8;
     border-radius: 40px;
+    background: #f8f8f8;
   }
 
   .all-menu__nav-link.active {
@@ -574,6 +575,15 @@
   }
 
   // 전체메뉴 content
+
+  .all-menu__body-contents {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100% - 106px);
+    padding-top: 20px;
+  }
+
   .all-menu__contents-title {
     display: flex;
     align-items: center;
@@ -581,7 +591,7 @@
     margin: 0px 30px;
     font-weight: 900;
     font-size: 1.8rem;
-    margin-bottom: 16px;
+    padding-bottom: 25px;
   }
 
   .all-menu__title__link {
@@ -605,14 +615,20 @@
   .all-menu__content__wrap {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 30px;
+    padding: 0px 12px;
   }
 
   .all-menu__content {
+    position: relative;
     display: block;
     width: 25%;
     padding: 0px 20px;
     margin-bottom: 30px;
+    border-right: 1px solid #eee;
+
+    &:nth-child(4) {
+      border-right: 0;
+    }
   }
 
   .all-menu__list-title {
@@ -630,6 +646,9 @@
     line-height: 22px;
     font-size: 1.4rem;
     color: #666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .hide {
