@@ -163,8 +163,9 @@ $(document).ready(function () {
     $(this).siblings(".footer-bottom__group__list").toggle();
   });
 
-  $(".footer-expand__button").on("click", function () {
+  $("#footerExpandBtn").on("click", function () {
     $(this).toggleClass("active");
+    $("#footerExpandCont").toggle();
   });
 });
 

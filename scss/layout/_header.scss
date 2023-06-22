@@ -472,6 +472,7 @@
       max-height: 80%;
       padding: 0px 24px;
       border-radius: 12px;
+      overflow: hidden;
     }
   }
 
@@ -582,6 +583,7 @@
     width: 100%;
     height: calc(100% - 106px);
     padding-top: 20px;
+    overflow-y: auto;
   }
 
   .all-menu__contents-title {

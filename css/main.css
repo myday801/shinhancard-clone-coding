@@ -1383,6 +1383,7 @@ a {
     max-height: 80%;
     padding: 0px 24px;
     border-radius: 12px;
+    overflow: hidden;
   }
 }
 .header .all-menu__header {
@@ -1473,6 +1474,7 @@ a {
   width: 100%;
   height: calc(100% - 106px);
   padding-top: 20px;
+  overflow-y: auto;
 }
 .header .all-menu__contents-title {
   display: flex;
@@ -1791,8 +1793,12 @@ a {
 }
 
 .footer-expand {
+  display: none;
   padding: 18px 24px;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background: #fff;
 }
 
@@ -1832,6 +1838,74 @@ a {
   .footer-expand__copyright-br {
     display: none;
   }
+}
+
+.footer__awards {
+  width: 240px;
+  margin: 26px auto 0;
+  text-align: center;
+}
+
+.footer__award-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer__award-link {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 5px 0px;
+  overflow: hidden;
+  color: transparent;
+}
+
+.footer__award-link--01 {
+  background: url("../../assets/images/footer_icon/smark01.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--02 {
+  background: url("../../assets/images/footer_icon/smark02.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--03 {
+  background: url("../../assets/images/footer_icon/smark03.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--04 {
+  background: url("../../assets/images/footer_icon/smark04.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--05 {
+  background: url("../../assets/images/footer_icon/smark05.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--06 {
+  width: 40px;
+  background: url("../../assets/images/footer_icon/smark06.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--07 {
+  background: url("../../assets/images/footer_icon/smark07.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--08 {
+  width: 40px;
+  background: url("../../assets/images/footer_icon/smark08.png") center center no-repeat;
+  background-size: auto 100%;
+}
+
+.footer__award-link--09 {
+  width: 70px;
+  background: url("../../assets/images/footer_icon/smark09.png") center center no-repeat;
+  background-size: auto 100%;
 }
 
 .main {
