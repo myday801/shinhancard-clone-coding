@@ -959,15 +959,6 @@ a {
     display: block;
   }
 }
-.header .header__row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.header .header-top__row {
-  justify-content: space-between;
-}
 .header .header-top__left {
   position: relative;
   display: flex;
@@ -986,6 +977,15 @@ a {
 }
 .header .header-top__utility-item:first-child {
   padding-left: 0;
+}
+.header .header__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header .header-top__row {
+  justify-content: space-between;
 }
 .header .top__utility-item-link {
   color: #494f60;
@@ -1355,6 +1355,7 @@ a {
   position: fixed;
   left: 0;
   top: 0;
+  display: none;
   z-index: 1000;
   width: 100%;
   height: 100%;
@@ -1468,7 +1469,7 @@ a {
   font-weight: 600;
   background: #383b5a;
 }
-.header .all-menu__body-contents {
+.header .all-menu__body-wrap {
   position: relative;
   display: block;
   width: 100%;
@@ -1485,7 +1486,7 @@ a {
   font-size: 1.8rem;
   padding-bottom: 25px;
 }
-.header .all-menu__title__link {
+.header .all-menu__title-link {
   position: relative;
   padding-right: 18px;
 }
@@ -1499,7 +1500,7 @@ a {
   background: url("../../assets/images/arr-60-r-a.png") center center no-repeat;
   background-size: 100% auto;
 }
-.header .all-menu__content__wrap {
+.header .all-menu__content-wrap {
   display: flex;
   flex-wrap: wrap;
   padding: 0px 12px;
@@ -1521,7 +1522,7 @@ a {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.header .all-menu__content__item {
+.header .all-menu__content-item {
   white-space: nowrap;
 }
 .header .all-menu__content__link {
@@ -1615,6 +1616,7 @@ a {
 
 .footer-middle__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   font-size: 1.1rem;
@@ -1771,16 +1773,16 @@ a {
 }
 
 .footer-expand__button-wrap {
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
-  margin-top: 7px;
 }
 
 .footer-expand__button {
   position: relative;
   width: 12px;
   height: 12px;
-  margin: 0 auto;
+  padding: 0;
   border-top: 2px solid #000;
   border-right: 2px solid #000;
   transform: rotate(135deg);
@@ -1849,6 +1851,9 @@ a {
 .footer__award-list {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__award-link {

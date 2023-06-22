@@ -52,6 +52,13 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
+  $("#allMenuLi").click(function () {
+    var allMenuIndex = $(this).index();
+    var targetBody = $("#allMenuBody" + allMenuIndex);
+    var topOffset = targetBody.offset().top;
+    $("html, body").animate({ scrollTop: topOffset }, 500);
+  });
+
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
     slidesPerView: 1,
