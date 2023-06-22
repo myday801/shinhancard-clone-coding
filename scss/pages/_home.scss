@@ -57,18 +57,35 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: auto;
+  margin-left: -14px;
 }
 
 .recommend-tabs__item {
   color: #888;
-  font-size: 2.2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    height: 3px;
+    background: #081350;
+  }
 }
 
 .recommend-tabs__link {
   position: relative;
-  display: block;
-  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  font-size: 1.8rem;
+
+  @include responsive(pc) {
+    height: 52px;
+    font-size: 2.2rem;
+  }
 }
 
 .recommend-tab__content-wrap {
@@ -86,6 +103,7 @@
 .recommend__tabs__item--active {
   display: block;
   color: #000;
+  font-weight: 600;
 }
 
 .recommend-tab__content__list {
@@ -97,6 +115,7 @@
 
 .recommend-tab__content-item {
   width: auto;
+  height: 100%;
   margin-right: 30px;
 }
 
@@ -110,29 +129,18 @@
   align-items: center;
   justify-content: space-between;
   width: 84px;
-  height: 133px;
-
-  @include responsive(tablet) {
-    width: 160px;
-    height: 255px;
-  }
+  height: 100%;
 
   @include responsive(pc) {
     width: 175px;
-    height: 100%;
   }
 }
 
 .recommend-tab__content-card {
   position: relative;
-  width: 133px;
-  height: 84px;
+  width: 84px;
+  height: 133px;
   margin: 0 auto;
-
-  @include responsive(tablet) {
-    width: 255px;
-    height: 160px;
-  }
 
   @include responsive(pc) {
     width: 175px;
@@ -144,16 +152,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 84px;
-  height: 133px;
+  width: 133px;
+  height: 84px;
   background: center center no-repeat;
   background-size: 100% auto;
   transform: translate(-50%, -50%) rotate(90deg);
-
-  @include responsive(tablet) {
-    width: 160px;
-    height: 255px;
-  }
 
   @include responsive(pc) {
     width: 278px;
@@ -162,14 +165,19 @@
 }
 
 .recommend-tab__content-text {
-  margin-top: 18px;
+  margin-top: 12px;
   line-height: 1.35;
   text-align: center;
+
+  @include responsive(pc) {
+    margin-top: 18px;
+  }
 }
 
 .recommend-tab__content-title {
   font-size: 1.3rem;
   line-height: 1.35;
+  text-align: center;
 
   @include responsive(pc) {
     font-size: 1.6rem;

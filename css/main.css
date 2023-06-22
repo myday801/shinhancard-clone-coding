@@ -1968,18 +1968,35 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: auto;
+  margin-left: -14px;
 }
 
 .recommend-tabs__item {
   color: #888;
-  font-size: 2.2rem;
+}
+.recommend-tabs__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  height: 3px;
+  background: #081350;
 }
 
 .recommend-tabs__link {
   position: relative;
-  display: block;
-  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  font-size: 1.8rem;
+}
+@media (min-width: 1024px) {
+  .recommend-tabs__link {
+    height: 52px;
+    font-size: 2.2rem;
+  }
 }
 
 .recommend-tab__content-wrap {
@@ -1997,6 +2014,7 @@ a {
 .recommend__tabs__item--active {
   display: block;
   color: #000;
+  font-weight: 600;
 }
 
 .recommend-tab__content__list {
@@ -2008,6 +2026,7 @@ a {
 
 .recommend-tab__content-item {
   width: auto;
+  height: 100%;
   margin-right: 30px;
 }
 
@@ -2021,32 +2040,19 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 84px;
-  height: 133px;
-}
-@media (min-width: 768px) {
-  .recommend-tab__content__link {
-    width: 160px;
-    height: 255px;
-  }
+  height: 100%;
 }
 @media (min-width: 1024px) {
   .recommend-tab__content__link {
     width: 175px;
-    height: 100%;
   }
 }
 
 .recommend-tab__content-card {
   position: relative;
-  width: 133px;
-  height: 84px;
+  width: 84px;
+  height: 133px;
   margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .recommend-tab__content-card {
-    width: 255px;
-    height: 160px;
-  }
 }
 @media (min-width: 1024px) {
   .recommend-tab__content-card {
@@ -2059,17 +2065,11 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 84px;
-  height: 133px;
+  width: 133px;
+  height: 84px;
   background: center center no-repeat;
   background-size: 100% auto;
   transform: translate(-50%, -50%) rotate(90deg);
-}
-@media (min-width: 768px) {
-  .recommend-tab__content-img {
-    width: 160px;
-    height: 255px;
-  }
 }
 @media (min-width: 1024px) {
   .recommend-tab__content-img {
@@ -2079,14 +2079,20 @@ a {
 }
 
 .recommend-tab__content-text {
-  margin-top: 18px;
+  margin-top: 12px;
   line-height: 1.35;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .recommend-tab__content-text {
+    margin-top: 18px;
+  }
 }
 
 .recommend-tab__content-title {
   font-size: 1.3rem;
   line-height: 1.35;
+  text-align: center;
 }
 @media (min-width: 1024px) {
   .recommend-tab__content-title {
