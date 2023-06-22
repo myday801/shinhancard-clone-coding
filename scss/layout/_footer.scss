@@ -259,8 +259,6 @@
 .footer-expand {
   display: none;
   padding: 18px 24px;
-  text-align: center;
-  user-select: none;
   background: #fff;
 }
 
@@ -303,13 +301,14 @@
 .footer__awards {
   width: 240px;
   margin: 26px auto 0;
-  text-align: center;
+  user-select: none;
 }
 
 .footer__award-list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }

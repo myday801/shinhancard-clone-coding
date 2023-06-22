@@ -128,7 +128,7 @@ $(document).ready(function () {
     "theClassicPlus.png",
   ];
 
-  $(".recommend-tab__content__img").each(function (index) {
+  $(".recommend-tab__content-img").each(function (index) {
     var imgPath = "./assets/images/card/" + imgArray[index];
     $(this).css("background-image", "url(" + imgPath + ")");
   });

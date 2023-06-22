@@ -19,6 +19,10 @@
       display: block;
     }
 
+    &__row {
+      justify-content: space-between;
+    }
+
     &__left {
       position: relative;
       display: flex;
@@ -30,16 +34,26 @@
     &__utility {
       position: relative;
       display: flex;
+    }
 
-      &-item {
-        position: relative;
-        padding: 8px 13px 8px 12px;
-        cursor: pointer;
+    &__utility-item {
+      position: relative;
+      padding: 8px 13px 8px 12px;
+      cursor: pointer;
+    }
 
-        &:first-child {
-          padding-left: 0;
-        }
-      }
+    &__utility-item:first-child {
+      padding-left: 0;
+    }
+
+    &__utility-item:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 15px;
+      width: 1px;
+      height: 12px;
+      background: #ddd;
     }
   }
 
@@ -50,47 +64,10 @@
     height: 100%;
   }
 
-  .header-top__row {
-    justify-content: space-between;
-  }
-
-  // .header-top__left {
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   height: 100%;
-  //   line-height: 1.7;
-  // }
-
-  // .header-top__utility {
-  //   position: relative;
-  //   display: flex;
-  // }
-
-  // .header-top__utility-item {
-  //   position: relative;
-  //   padding: 8px 13px 8px 12px;
-  //   cursor: pointer;
-  // }
-
-  // .header-top__utility-item:first-child {
-  //   padding-left: 0;
-  // }
-
   .top__utility-item-link {
     color: $gray;
     font-size: 1.4rem;
     text-align: center;
-  }
-
-  .header-top__utility-item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 15px;
-    width: 1px;
-    height: 12px;
-    background: #ddd;
   }
 
   .header-top__dropdown {
@@ -123,19 +100,19 @@
     width: 188px;
     border: 1px solid #666;
     background: #fff;
-  }
 
-  .dropdown__menu-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 30px 10px 10px;
-  }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 30px 10px 10px;
+    }
 
-  .dropdown__menu-item {
-    width: 50%;
-    padding: 5px;
-    font-size: 1.3rem;
-    color: #111;
+    &-item {
+      width: 50%;
+      padding: 5px;
+      font-size: 1.3rem;
+      color: #111;
+    }
   }
 
   .dropdown__close-button {
@@ -197,10 +174,10 @@
       height: 74px;
       padding: 0 40px;
     }
-  }
 
-  .header-bottom__row {
-    justify-content: space-between;
+    &__row {
+      justify-content: space-between;
+    }
   }
 
   .header-logo__image {

@@ -71,13 +71,16 @@
   padding: 0 20px;
 }
 
-.recommend-tab__content__wrap {
-  margin-top: 20px;
+.recommend-tab__content-wrap {
+  position: relative;
+  margin-top: 45px;
 }
 
 .recommend-tab__content {
+  position: relative;
   display: none;
-  margin-top: 100px;
+  margin: -20px 0px 0px;
+  padding: 20px 24px 0px;
 }
 
 .recommend__tabs__item--active {
@@ -87,12 +90,14 @@
 
 .recommend-tab__content__list {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
 }
 
-.recommend-tab__content__item {
-  margin: 0 auto;
+.recommend-tab__content-item {
+  width: auto;
+  margin-right: 30px;
 }
 
 .recommend-tab__content__list:nth-child(5) {
@@ -114,16 +119,15 @@
 
   @include responsive(pc) {
     width: 175px;
-    height: 278px;
+    height: 100%;
   }
 }
 
-.recommend-tab__content__img {
+.recommend-tab__content-card {
+  position: relative;
   width: 133px;
   height: 84px;
-  background: center center no-repeat;
-  background-size: 100% auto;
-  transform: rotate(90deg);
+  margin: 0 auto;
 
   @include responsive(tablet) {
     width: 255px;
@@ -131,16 +135,41 @@
   }
 
   @include responsive(pc) {
-    width: 100%;
-    height: 100%;
+    width: 175px;
+    height: 278px;
   }
 }
 
-.recommend-tab__content__title {
+.recommend-tab__content-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 133px;
+  background: center center no-repeat;
+  background-size: 100% auto;
+  transform: translate(-50%, -50%) rotate(90deg);
+
+  @include responsive(tablet) {
+    width: 160px;
+    height: 255px;
+  }
+
+  @include responsive(pc) {
+    width: 278px;
+    height: 175px;
+  }
+}
+
+.recommend-tab__content-text {
   margin-top: 18px;
-  font-size: 1.3rem;
   line-height: 1.35;
   text-align: center;
+}
+
+.recommend-tab__content-title {
+  font-size: 1.3rem;
+  line-height: 1.35;
 
   @include responsive(pc) {
     font-size: 1.6rem;
