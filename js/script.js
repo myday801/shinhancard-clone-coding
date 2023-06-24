@@ -112,6 +112,7 @@ $(document).ready(function () {
   });
 
   // Recommend card section tabmenu
+
   $(".recommend-tabs__link").click(function (e) {
     e.preventDefault();
     var tabId = $(this).attr("href");
@@ -123,6 +124,8 @@ $(document).ready(function () {
     $(this).parent().addClass("recommend__tabs__item--active");
   });
   $(".recommend-tabs__item").first().addClass("recommend__tabs__item--active");
+
+  $(".recommend-tabs__link").first().click();
 
   var imgArray = [
     "deepDreamPlatinumPlus.png",
