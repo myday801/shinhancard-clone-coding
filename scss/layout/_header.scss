@@ -497,6 +497,7 @@
       display: none;
 
       @include responsive(pc) {
+        display: block;
         font-size: 2rem;
         line-height: 1;
         font-weight: 900;
@@ -588,14 +589,13 @@
     position: relative;
     display: block;
     width: 100%;
-    height: calc(100% - 106px);
+    height: 500px;
     padding-top: 20px;
     overflow-y: auto;
   }
 
   .all-menu__body {
     height: 100%;
-    overflow: auto;
   }
 
   .all-menu__contents-title {

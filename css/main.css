@@ -1407,6 +1407,7 @@ a {
 }
 @media (min-width: 1024px) {
   .header .all-menu__header-title {
+    display: block;
     font-size: 2rem;
     line-height: 1;
     font-weight: 900;
@@ -1480,13 +1481,12 @@ a {
   position: relative;
   display: block;
   width: 100%;
-  height: calc(100% - 106px);
+  height: 500px;
   padding-top: 20px;
   overflow-y: auto;
 }
 .header .all-menu__body {
   height: 100%;
-  overflow: auto;
 }
 .header .all-menu__contents-title {
   display: flex;

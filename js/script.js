@@ -61,17 +61,10 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
-  // $("all-menu__nav-link").click(function (event) {
-  //   event.preventDefault(); // 기본 링크 동작을 막습니다.
-  //   const targetId = $(this).attr("href");
-  //   const targetDiv = $(targetId);
-  //   $("html, body").animate(
-  //     {
-  //       scrollTop: targetDiv.offset().top,
-  //     },
-  //     800
-  //   );
-  // });
+  $(".all-menu__nav-link").click(function () {
+    const targetId = $(this).attr("href");
+    $(targetId)[0].scrollIntoView();
+  });
 
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
