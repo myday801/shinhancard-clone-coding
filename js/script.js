@@ -41,23 +41,37 @@ $(document).ready(function () {
   });
 
   // all-menu toggle
-  $("#allMenuButton, .all-menu__close").click(function () {
+  $("#allMenuBtn, .all-menu__close").click(function () {
     $("#allMenuWrap").toggle();
   });
 
   $(".all-menu__nav-link:first").addClass("active");
 
-  $(".all-menu__nav-link").click(function () {
+  $(".all-menu__nav-link").click(function (event) {
+    event.preventDefault();
+    const targetId = $(this).attr("href");
+    const targetDiv = $(targetId);
+    $(".all-menu__modal").animate(
+      {
+        scrollTop: targetDiv.offset().top,
+      },
+      800
+    );
     $(".all-menu__nav-link").removeClass("active");
     $(this).addClass("active");
   });
 
-  $("#allMenuLi").click(function () {
-    var allMenuIndex = $(this).index();
-    var targetBody = $("#allMenuBody" + allMenuIndex);
-    var topOffset = targetBody.offset().top;
-    $("html, body").animate({ scrollTop: topOffset }, 500);
-  });
+  // $("all-menu__nav-link").click(function (event) {
+  //   event.preventDefault(); // 기본 링크 동작을 막습니다.
+  //   const targetId = $(this).attr("href");
+  //   const targetDiv = $(targetId);
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: targetDiv.offset().top,
+  //     },
+  //     800
+  //   );
+  // });
 
   // Promotion swiper
   var swiper3 = new Swiper(".js-promotion-swiper", {
