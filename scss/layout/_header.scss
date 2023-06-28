@@ -55,47 +55,47 @@
       height: 12px;
       background: #ddd;
     }
+
+    &__utility-item-link {
+      color: $gray;
+      font-size: 1.4rem;
+      text-align: center;
+    }
   }
 
-  .header__row {
+  &__row {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
   }
 
-  .top__utility-item-link {
-    color: $gray;
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
   .header-top__dropdown {
     position: relative;
     padding: 8px 13px 8px 12px;
-  }
 
-  .dropdown__button {
-    border: 0;
-    background: transparent;
-    font-family: $font-stack;
-    font-size: 1.4rem;
-    color: $gray;
-    cursor: pointer;
-  }
+    &-button {
+      border: 0;
+      background: transparent;
+      font-family: $font-stack;
+      font-size: 1.4rem;
+      color: $gray;
+      cursor: pointer;
+    }
 
-  .dropdown__arrow {
-    width: 16px;
-    height: 16px;
-    margin-bottom: 2px;
-    cursor: pointer;
+    &-arrow {
+      width: 16px;
+      height: 16px;
+      margin-bottom: 2px;
+      cursor: pointer;
+    }
   }
 
   .dropdown__menu {
     position: absolute;
     left: 0;
     top: 0;
-    display: block;
+    display: none;
     z-index: 51;
     width: 188px;
     border: 1px solid #666;
@@ -141,11 +141,9 @@
   }
 
   .user-menu__item-link {
-    @include responsive(pc) {
-      font-size: 1.3rem;
-      color: #323b50;
-      padding: 0 10px;
-    }
+    font-size: 1.3rem;
+    color: #323b50;
+    padding: 0 10px;
   }
 
   .user-menu__item:not(:first-child)::before {
@@ -254,19 +252,19 @@
       padding: 0 15px;
       font-size: 2rem;
     }
-  }
 
-  .navbar-menu__item-link {
-    color: inherit;
-    white-space: nowrap;
+    &-link {
+      color: inherit;
+      white-space: nowrap;
 
-    @include responsive(pc) {
-      line-height: 70px;
+      @include responsive(pc) {
+        line-height: 70px;
+      }
     }
-  }
 
-  .navbar-menu__item-link:visited {
-    color: #222;
+    &-link:visited {
+      color: #222;
+    }
   }
 
   .swiper-button-next1,
@@ -360,17 +358,17 @@
     width: 100%;
     height: 60px;
     margin: 0 auto;
-  }
 
-  .menu-depth2__title-link {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #222;
-  }
+    &-link {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #222;
+    }
 
-  .menu-depth2__title-icon {
-    width: 22px;
-    height: 22px;
+    &-icon {
+      width: 22px;
+      height: 22px;
+    }
   }
 
   .menu-depth2__content {
@@ -385,11 +383,11 @@
     display: block;
     width: 25%;
     padding: 0 20px;
-  }
 
-  .menu-depth2__list-title {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    &-title {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
   }
 
   .menu-depth2__link {
@@ -403,40 +401,40 @@
     border: 0;
     background: transparent;
     cursor: pointer;
-  }
 
-  .menu-button__icon {
-    width: 24px;
-    height: 24px;
+    &__icon {
+      width: 24px;
+      height: 24px;
 
-    @include responsive(pc) {
-      width: 32px;
-      height: 32px;
+      @include responsive(pc) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
   .header-bottom__right {
     position: relative;
     display: flex;
-  }
 
-  .bottom__right-loginwrap {
-    @include responsive(pc) {
-      display: none;
+    &-loginwrap {
+      @include responsive(pc) {
+        display: none;
+      }
     }
-  }
 
-  .bottom__right-loginbtn {
-    display: block;
-    height: 24px;
-    padding: 0 8px;
-    line-height: 22px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    background: #fff;
+    &-loginbtn {
+      display: block;
+      height: 24px;
+      padding: 0 8px;
+      line-height: 22px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      background: #fff;
 
-    @include responsive(pc) {
-      display: none;
+      @include responsive(pc) {
+        display: none;
+      }
     }
   }
 
