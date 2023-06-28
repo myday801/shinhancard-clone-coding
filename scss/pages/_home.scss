@@ -17,24 +17,24 @@
     width: 700px;
     padding: 60px 0;
   }
-}
 
-.main-search__form {
-  border-radius: 8px;
-  background-color: #fff;
-}
+  &__form {
+    border-radius: 8px;
+    background-color: #fff;
+  }
 
-.main-search__input {
-  width: 100%;
-  height: 64px;
-  border: 2px solid #486eff;
-  border-radius: 8px;
-  box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.15);
-  font-size: 2rem;
-  color: #999;
-  background: url("/assets/images/ico-72-src2.png") no-repeat calc(100% - 10px)
-    center / 32px 32px;
-  padding-left: 18px;
+  &__input {
+    width: 100%;
+    height: 64px;
+    border: 2px solid #486eff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2rem;
+    color: #999;
+    background: url("/assets/images/ico-72-src2.png") no-repeat
+      calc(100% - 10px) center / 32px 32px;
+    padding-left: 18px;
+  }
 }
 
 // Recommend card section
@@ -88,6 +88,12 @@
   }
 }
 
+.recommend__tabs__item--active {
+  display: block;
+  color: #000;
+  font-weight: 600;
+}
+
 .recommend-tab__content-wrap {
   position: relative;
   margin-top: 45px;
@@ -98,89 +104,83 @@
   display: none;
   margin: -20px 0px 0px;
   padding: 20px 24px 0px;
-}
 
-.recommend__tabs__item--active {
-  display: block;
-  color: #000;
-  font-weight: 600;
-}
-
-.recommend-tab__content__list {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-}
-
-.recommend-tab__content-item {
-  width: auto;
-  height: 100%;
-  margin-right: 30px;
-}
-
-.recommend-tab__content__list:nth-child(5) {
-  margin-right: 0;
-}
-
-.recommend-tab__content__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 84px;
-  height: 100%;
-
-  @include responsive(pc) {
-    width: 175px;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
   }
-}
 
-.recommend-tab__content-card {
-  position: relative;
-  width: 84px;
-  height: 133px;
-  margin: 0 auto;
-
-  @include responsive(pc) {
-    width: 175px;
-    height: 278px;
+  &-item {
+    width: auto;
+    height: 100%;
+    margin-right: 30px;
   }
-}
 
-.recommend-tab__content-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 133px;
-  height: 84px;
-  background: center center no-repeat;
-  background-size: 100% auto;
-  transform: translate(-50%, -50%) rotate(90deg);
-
-  @include responsive(pc) {
-    width: 278px;
-    height: 175px;
+  &-list:nth-child(5) {
+    margin-right: 0;
   }
-}
 
-.recommend-tab__content-text {
-  margin-top: 12px;
-  line-height: 1.35;
-  text-align: center;
+  &-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 84px;
+    height: 100%;
 
-  @include responsive(pc) {
-    margin-top: 18px;
+    @include responsive(pc) {
+      width: 175px;
+    }
   }
-}
 
-.recommend-tab__content-title {
-  font-size: 1.3rem;
-  line-height: 1.35;
-  text-align: center;
+  &-card {
+    position: relative;
+    width: 84px;
+    height: 133px;
+    margin: 0 auto;
 
-  @include responsive(pc) {
-    font-size: 1.6rem;
+    @include responsive(pc) {
+      width: 175px;
+      height: 278px;
+    }
+  }
+
+  &-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 133px;
+    height: 84px;
+    background: center center no-repeat;
+    background-size: 100% auto;
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    @include responsive(pc) {
+      width: 278px;
+      height: 175px;
+    }
+  }
+
+  &-text {
+    margin-top: 12px;
+    line-height: 1.35;
+    text-align: center;
+
+    @include responsive(pc) {
+      margin-top: 18px;
+    }
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    line-height: 1.35;
+    text-align: center;
+
+    @include responsive(pc) {
+      font-size: 1.6rem;
+    }
   }
 }
 
