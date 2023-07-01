@@ -102,8 +102,8 @@
 .recommend-tab__content {
   position: relative;
   display: none;
-  margin: -20px 0px 0px;
-  padding: 20px 24px 0px;
+  margin-top: -20px;
+  padding-top: 20px;
 
   &-list {
     display: flex;
@@ -116,10 +116,10 @@
     width: auto;
     height: 100%;
     margin-right: 30px;
-  }
 
-  &-list:nth-child(5) {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &-link {
