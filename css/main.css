@@ -1359,9 +1359,13 @@ a {
   height: 100%;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+}
+@media (min-width: 1024px) {
+  .header .all-menu__wrap {
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
 }
 .header .all-menu__modal {
   position: absolute;
@@ -1479,9 +1483,17 @@ a {
   position: relative;
   display: block;
   width: 100%;
-  height: 500px;
   padding-top: 20px;
-  overflow-y: auto;
+}
+@media (min-width: 1024px) {
+  .header .all-menu__body-wrap {
+    height: 500px;
+    overflow-y: auto;
+  }
+}
+.header .all-menu__body-row {
+  margin: 0 30px;
+  padding: 24px 0px 44px;
 }
 .header .all-menu__body {
   height: 100%;
@@ -1490,10 +1502,16 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0px 30px;
   font-weight: 900;
-  font-size: 1.8rem;
-  padding-bottom: 25px;
+  font-size: 1.4rem;
+  color: #888;
+}
+@media (min-width: 1024px) {
+  .header .all-menu__contents-title {
+    padding-bottom: 25px;
+    font-size: 1.8rem;
+    color: #000;
+  }
 }
 .header .all-menu__title-link {
   position: relative;
@@ -1502,25 +1520,49 @@ a {
 .header .all-menu__title-arrow {
   position: absolute;
   top: 50%;
-  right: -5px;
+  right: 0;
   transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
   background: url("../../assets/images/arr-60-r-a.png") center center no-repeat;
   background-size: 100% auto;
 }
+@media (min-width: 1024px) {
+  .header .all-menu__title-arrow {
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    opacity: 1;
+  }
+}
 .header .all-menu__content-wrap {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 0px 12px;
+}
+@media (min-width: 1024px) {
+  .header .all-menu__content-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 12px;
+  }
 }
 .header .all-menu__content {
   position: relative;
   display: block;
-  width: 25%;
-  padding: 0px 20px;
+  width: 100%;
   margin-bottom: 30px;
-  border-right: 1px solid #eee;
+  border-top: 1px dotted #ccc;
+}
+@media (min-width: 1024px) {
+  .header .all-menu__content {
+    width: 25%;
+    padding: 0px 20px;
+    margin-bottom: 30px;
+    border-right: 1px solid #eee;
+  }
 }
 .header .all-menu__content:nth-child(4) {
   border-right: 0;
