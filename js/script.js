@@ -41,29 +41,39 @@ $(document).ready(function () {
   });
 
   // all-menu toggle
-  $("#allMenuBtn, .all-menu__close").click(function () {
+  $("#allMenuBtn, #allMenuClose").click(function () {
     $("#allMenuWrap").toggle();
   });
 
-  $(".all-menu__nav-link:first").addClass("active");
+  $(".allmenu__nav-item:first").addClass("active");
 
-  $(".all-menu__nav-link").click(function (event) {
+  $(".allmenu__nav-item").click(function (event) {
     event.preventDefault();
     const targetId = $(this).attr("href");
     const targetDiv = $(targetId);
-    $(".all-menu__modal").animate(
+    $(".allmenu").animate(
       {
         scrollTop: targetDiv.offset().top,
       },
       800
     );
-    $(".all-menu__nav-link").removeClass("active");
+    $(".allmenu__nav-item").removeClass("active");
     $(this).addClass("active");
   });
 
-  $(".all-menu__nav-link").click(function () {
+  $(".allmenu__nav-item").click(function () {
     const targetId = $(this).attr("href");
     $(targetId)[0].scrollIntoView();
+  });
+
+  // 전체메뉴 nav swiper
+
+  var swiper5 = new Swiper(".js-swiper-allMenuNav", {
+    slidesPerView: "auto",
+    navigation: {
+      prevEl: ".swiper-button-prev2",
+      nextEl: ".swiper-button-next2",
+    },
   });
 
   // Promotion swiper
