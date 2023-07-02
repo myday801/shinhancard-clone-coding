@@ -47,22 +47,26 @@ $(document).ready(function () {
 
   $(".allmenu__nav-item:first").addClass("active");
 
-  $(".allmenu__nav-item").click(function () {
-    // event.preventDefault();
-    // const targetId = $(this).attr("href");
-    // const targetDiv = $(targetId);
-    // $(".allmenu__body").animate(
-    //   {
-    //     scrollTop: targetDiv.offset().top,
-    //   },
-    //   800
-    // );
+  $(".allmenu__nav-item").click(function (event) {
+    event.preventDefault();
+    const targetId = $(this).find("a").attr("href");
+    const targetDiv = $(targetId);
+
+    // 스크롤 이동
+    $("html, body").animate(
+      {
+        scrollTop: targetDiv.offset().top,
+      },
+      800
+    );
+
+    // allmenu__nav-item click active
     $(".allmenu__nav-item").removeClass("active");
     $(this).addClass("active");
   });
 
   $(".allmenu__nav-item").click(function () {
-    const targetId = $(this).attr("href");
+    const targetId = $(this).find("a").attr("href");
     $(targetId)[0].scrollIntoView();
   });
 
