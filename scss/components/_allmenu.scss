@@ -185,12 +185,11 @@
     }
   }
 
-  // 전체메뉴 내용
+  // 전체메뉴 body
 
   &__body {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 102px);
     padding-top: 24px;
     overflow: auto;
   }
@@ -200,6 +199,7 @@
   }
 
   &__body-title {
+    padding: 24px 0px;
     color: #888;
     font-size: 1.4rem;
     font-weight: bold;
@@ -214,6 +214,48 @@
     height: 18px;
     padding-left: 16px;
     opacity: 0.4;
+  }
+
+  // 전체메뉴 body 내용
+
+  &__body-bottom {
+    height: calc(100% - 102px);
+  }
+
+  &__body-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    border-top: 1px dotted #ccc;
+
+    @include responsive(pc) {
+      border-top: 0;
+    }
+  }
+
+  &__body-content-title {
+    color: #888;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__body-content-list {
+    margin-top: 20px;
+    font-size: 1.6rem;
+  }
+
+  &__body-content-item {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__body-content-item:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &__body-content-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   // 전체메뉴 footer
