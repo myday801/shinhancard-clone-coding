@@ -193,6 +193,11 @@
     padding-top: 24px;
     height: 80vh;
     overflow-y: auto;
+
+    @include responsive(pc) {
+      height: 768px;
+      max-height: 80%;
+    }
   }
 
   &__body-top {

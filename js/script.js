@@ -45,30 +45,38 @@ $(document).ready(function () {
     $("#allMenuWrap").toggle();
   });
 
-  $(".allmenu__nav-item:first").addClass("active");
+  const allMenuNav = $(".allmenu__nav-item");
 
-  $(".allmenu__nav-item").click(function (event) {
+  allMenuNav.first().addClass("active");
+
+  allMenuNav.click(function (event) {
     event.preventDefault();
     const targetId = $(this).find("a").attr("href");
-    const targetDiv = $(targetId);
+    const targetSection = $(targetId);
 
     // 스크롤 이동
-    $("html, body").animate(
-      {
-        scrollTop: targetDiv.offset().top,
-      },
-      800
-    );
+    // $("html, body").animate(
+    //   {
+    //     scrollTop: targetSection.offset().top,
+    //   },
+    //   800
+    // );
 
-    // allmenu__nav-item click active
-    $(".allmenu__nav-item").removeClass("active");
+    // allmenu__nav-item 클릭 시 active
+    allMenuNav.removeClass("active");
     $(this).addClass("active");
+
+    if (targetSection.length > 0) {
+      // 스크롤 이동
+      const targetOffset = targetSection.offset().top;
+      $("html, body").animate({ scrollTop: targetOffset }, 800);
+    }
   });
 
-  $(".allmenu__nav-item").click(function () {
-    const targetId = $(this).find("a").attr("href");
-    $(targetId)[0].scrollIntoView();
-  });
+  // allMenuNav.click(function () {
+  //   const targetId = $(this).find("a").attr("href");
+  //   $(targetId)[0].scrollIntoView();
+  // });
 
   // 전체메뉴 nav swiper
 

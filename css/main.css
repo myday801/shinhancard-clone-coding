@@ -1605,6 +1605,12 @@ a {
   height: 80vh;
   overflow-y: auto;
 }
+@media (min-width: 1024px) {
+  .allmenu__body {
+    height: 768px;
+    max-height: 80%;
+  }
+}
 .allmenu__body-top {
   padding-top: 8px;
 }
