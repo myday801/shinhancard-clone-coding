@@ -1,0 +1,377 @@
+// 전체메뉴
+.allmenu__wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive(pc) {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.allmenu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  z-index: 55;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+
+  @include responsive(pc) {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    height: 768px;
+    max-height: 80%;
+    padding: 0px 24px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__row {
+    padding: 0px 24px;
+
+    @include responsive(pc) {
+      padding: 0px 30px;
+    }
+  }
+
+  // 전체메뉴 header
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    border-bottom: 5px solid #f4f7fc;
+
+    @include responsive(pc) {
+      border-bottom: 0;
+    }
+  }
+
+  &__header-title {
+    display: none;
+
+    @include responsive(pc) {
+      display: block;
+      margin-top: 40px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &__header-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 1.4rem;
+
+    @include responsive(pc) {
+      display: none;
+    }
+  }
+
+  &__header-item {
+    padding: 0px 5px;
+  }
+
+  &__header-link {
+    position: relative;
+    line-height: 1.3;
+  }
+
+  &__header-link-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__header-link-text {
+    margin-left: -6px;
+  }
+
+  // 전체메뉴 close 버튼
+
+  &__header-close {
+    position: relative;
+    cursor: pointer;
+
+    @include responsive(pc) {
+      position: absolute;
+      right: -42px;
+      top: 12px;
+    }
+  }
+
+  &__header-close-icon {
+    width: 24px;
+    height: 24px;
+
+    @include responsive(pc) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  // 전체메뉴 body
+
+  &__body-wrap {
+    position: relative;
+    display: block;
+    height: calc(100% - 60px);
+  }
+
+  // 전체메뉴 nav
+
+  &__nav-wrap {
+    margin-top: 20px;
+  }
+
+  &__nav {
+    overflow: visible;
+
+    @include responsive(pc) {
+      padding: 10px 0px;
+    }
+  }
+
+  &__nav-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__nav-item {
+    height: 40px;
+    margin-left: 6px;
+    color: #666;
+    font-size: 1.4rem;
+    background: #f8f8f8;
+    border-radius: 40px;
+
+    @include responsive(pc) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__nav-item:first-child {
+    margin-left: 0;
+  }
+
+  &__nav-item.active {
+    color: #fff;
+    background: #383b5a;
+  }
+
+  &__nav-link {
+    padding: 0px 16px;
+    line-height: 3;
+
+    @include responsive(pc) {
+      line-height: 2.5;
+    }
+  }
+
+  // 전체메뉴 body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    height: 80vh;
+    overflow-y: auto;
+
+    @include responsive(pc) {
+      height: 768px;
+      max-height: 80%;
+    }
+  }
+
+  &__body-top {
+    padding-top: 8px;
+  }
+
+  &__body-headline {
+    position: relative;
+    display: block;
+    height: 22px;
+    margin: 0px 24px 0px;
+    padding-top: 20px;
+    text-align: center;
+
+    @include responsive(pc) {
+      display: none;
+    }
+  }
+
+  &__body-headline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background: #2c3548;
+  }
+
+  &__body-headline-text {
+    position: relative;
+    top: -6px;
+    margin: 0px auto;
+    padding: 0px 12px;
+    color: #383b5a;
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1;
+    background: #fff;
+  }
+
+  &__body-title {
+    padding: 24px 0px;
+    color: #888;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__body-title-link {
+    position: relative;
+  }
+
+  &__body-title-icon {
+    width: 18px;
+    height: 18px;
+    padding-left: 16px;
+    opacity: 0.4;
+  }
+
+  // 전체메뉴 body 내용
+
+  &__body-bottom {
+    height: calc(100% - 102px);
+  }
+
+  &__body-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+    border-top: 1px dotted #ccc;
+
+    @include responsive(pc) {
+      border-top: 0;
+    }
+  }
+
+  &__body-content-title {
+    color: #888;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  &__body-content-list {
+    margin-top: 20px;
+    font-size: 1.6rem;
+  }
+
+  &__body-content-item {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__body-content-item:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &__body-content-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // 전체메뉴 footer
+
+  &__footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: #eee;
+
+    @include responsive(pc) {
+      display: none;
+    }
+  }
+
+  &__footer-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px;
+  }
+
+  &__footer-item {
+    position: relative;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__footer-link {
+    padding: 0px 14px;
+  }
+
+  &__footer-item:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 1px;
+    height: 14px;
+    background: #b1b7c4;
+  }
+}
+
+// 전체메뉴 nav swiper
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 24px;
+  height: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  @include responsive(pc) {
+    display: none;
+  }
+}
+
+.swiper-button-prev2 {
+  left: 0;
+  background: #fff url("/assets/images/arr-60-l-a.png") center center no-repeat;
+  background-size: 20px auto;
+}
+
+.swiper-button-next2 {
+  right: 0;
+  background: #fff url("/assets/images/arr-60-r-a.png") center center no-repeat;
+  background-size: 20px auto;
+}

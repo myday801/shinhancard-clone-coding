@@ -1,6 +1,7 @@
 @import "base/reset";
 @import "base/typography";
 @import "lib/swiper-bundle";
+@import "components/functionalbuttons";
 
 @import "abstracts/variables";
 @import "abstracts/responsive";
@@ -10,6 +11,7 @@
 @import "components/swiper";
 
 @import "layout/header";
+@import "components/allmenu";
 
 @import "layout/footer";
 @import "pages/home";
