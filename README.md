@@ -1,13 +1,7 @@
 # 신한카드 홈페이지 클론코딩
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=신한카드%20홈페이지%20클론코딩&fontSize=40)
-
-### Skills
-
-<img src="https://img.shields.io/badge/HTML-#E34F26?style=flat&logo=HTML5&logoColor=white"/>
-<img src="https://img.shields.io/badge/아이콘내용-바탕색?style=flat&logo=로고이름&logoColor=white"/>
-<img src="https://img.shields.io/badge/아이콘내용-바탕색?style=flat&logo=로고이름&logoColor=white"/>
-<img src="https://img.shields.io/badge/아이콘내용-바탕색?style=flat&logo=로고이름&logoColor=white"/>
+<img src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=black"/>
 
 ### 프로젝트 설명
 
