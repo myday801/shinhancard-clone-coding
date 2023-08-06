@@ -5,8 +5,15 @@
 <img src="https://img.shields.io/badge/scss-CC6699?style=flat-square&logo=sass&logoColor=black"/>
 
 ### 프로젝트 설명
-
+BEM과 Scss를 사용하여 반응형 홈페이지를 구현하였습니다.  
+Scss mixin을 활용하여 mideaquery를 처리하였고, 재사용성을 고려하여 파일단위로 모듈화하였습니다.  
+Html5 시멘틱 태그를 활용하였습니다.  
+Scss 작성시, 중복된 코드 작성하지 않기, 직관적인 네이밍 사용하기 등 클린코드의 법칙들을 활용하여 더 좋은 코드를 작성하기 위해 노력하였습니다.  
+협업을 위해 Google Html/Css Style Guide를 참고하여 컨벤션을 지키도록 노력하였습니다.  
+  
 ### 참고자료
+
+[더 좋은 css 작성하기](https://www.freecodecamp.org/news/7-important-tips-for-writing-better-css)
 
 [Google HTML / CSS guide](https://google.github.io/styleguide/htmlcssguide.html)
 
