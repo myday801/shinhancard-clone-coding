@@ -13,12 +13,12 @@ Scss 작성시, 중복된 코드 작성하지 않기, 직관적인 네이밍 사
   
 ### 참고자료
 
-[더 좋은 css 작성하기](https://www.freecodecamp.org/news/7-important-tips-for-writing-better-css)
+[더 좋은 css 작성하기](https://www.freecodecamp.org/news/7-important-tips-for-writing-better-css) - https://www.freecodecamp.org/news/7-important-tips-for-writing-better-css
 
-[Google HTML / CSS guide](https://google.github.io/styleguide/htmlcssguide.html)
+[Google HTML / CSS guide](https://google.github.io/styleguide/htmlcssguide.html) - https://google.github.io/styleguide/htmlcssguide.html
 
-[태그 선택자 사용하지 않기](https://frontstuff.io/you-need-to-stop-targeting-tags-in-css)
+[태그 선택자 사용하지 않기](https://frontstuff.io/you-need-to-stop-targeting-tags-in-css) - https://frontstuff.io/you-need-to-stop-targeting-tags-in-css
 
-[SCSS Achitecture](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4) - scss 7-1 pattern 을 참고하여 효율적으로 폴더를 관리할 수 있음
+[SCSS Achitecture](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4) - https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4  scss 7-1 pattern 을 참고하여 효율적으로 폴더를 관리할 수 있음
 
-[BEM 구조 사용하기](https://simple-web.dev/bem-by-example-part-2) - Block\_\_Element—Modifier 구조를 사용함 ⇒ 클래스네임만으로 구조를 알 수 있게 되어 편리함, scss를 사용할 때 편리함
+[BEM 구조 사용하기](https://simple-web.dev/bem-by-example-part-2) - https://simple-web.dev/bem-by-example-part-2   Block\_\_Element—Modifier 구조를 사용함 ⇒ 클래스네임만으로 구조를 알 수 있게 되어 편리함, scss를 사용할 때 편리함
