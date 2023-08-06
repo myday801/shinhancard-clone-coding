@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=black"/>
 <img src="https://img.shields.io/badge/scss-CC6699?style=flat-square&logo=sass&logoColor=black"/>
 
-### 프로젝트 설명
+### 프로젝트 특징
 BEM과 Scss를 사용하여 반응형 홈페이지를 구현하였습니다.  
 Scss mixin을 활용하여 mideaquery를 처리하였고, 재사용성을 고려하여 파일단위로 모듈화하였습니다.  
 Html5 시멘틱 태그를 활용하였습니다.  
