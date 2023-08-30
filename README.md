@@ -1,8 +1,10 @@
 # 신한카드 홈페이지 클론코딩
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=신한카드%20홈페이지%20클론코딩&fontSize=40)
-<img src="https://img.shields.io/badge/html5-E34F26?style=flat-square&logo=html5&logoColor=black"/>
-<img src="https://img.shields.io/badge/scss-CC6699?style=flat-square&logo=sass&logoColor=black"/>
+
+### Skills & Tools
+<img src="https://img.shields.io/badge/html5-E34F26?style=flat&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/sass-CC6699?style=flat&logo=sass&logoColor=white"/> <img src="https://img.shields.io/badge/css3-1572B6?style=flat&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/jquery-0769AD?style=flat&logo=jquery&logoColor=white"/> <img src="https://img.shields.io/badge/swiper-6332F6?style=flat&logo=swiper&logoColor=white"/>
+  
 
 ### 프로젝트 특징
 BEM과 Scss를 사용하여 반응형 홈페이지를 구현하였습니다.  
